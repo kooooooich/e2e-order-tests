@@ -1,0 +1,203 @@
+{
+  "testInfo": {
+    "id": "test_012",
+    "option": "専用スタンドあり",
+    "shipping": "ゆうパケット",
+    "payment": "d払い"
+  },
+  "url": "https://calendar.shimaumaprint.com/edit/",
+  "credentialKey": "dev",
+  "device": "pc",
+  "headless": true,
+  "actions": [
+    {
+      "type": "waitForSelector",
+      "selector": "body",
+      "timeout": 10000
+    },
+    {
+      "type": "wait",
+      "x": 3000
+    },
+    {
+      "type": "click",
+      "selector": "text=ましかくサイズ"
+    },
+    {
+      "type": "wait",
+      "x": 2000
+    },
+    {
+      "type": "click",
+      "selector": "text=次へ"
+    },
+    {
+      "type": "wait",
+      "x": 2000
+    },
+    {
+      "type": "click",
+      "selector": "text=ストライプA001"
+    },
+    {
+      "type": "wait",
+      "x": 2000
+    },
+    {
+      "type": "click",
+      "selector": "text=/写真/"
+    },
+    {
+      "type": "wait",
+      "x": 2000
+    },
+    {
+      "type": "uploadFile",
+      "selector": "input[type=file]",
+      "filePath": "/Users/kooooooich/work/mcp-playwright-server/src/images/anna-hunko-TjxjFl9nWlc-unsplash.jpg"
+    },
+    {
+      "type": "wait",
+      "x": 10000
+    },
+    {
+      "type": "click",
+      "selector": "text=自動配置"
+    },
+    {
+      "type": "wait",
+      "x": 10000
+    },
+    {
+      "type": "evaluate",
+      "value": "const btn = Array.from(document.querySelectorAll('button, a, [role=button]')).find(el => el.textContent.includes('注文')); if(btn) { btn.click(); 'clicked'; } else { 'not found'; }"
+    },
+    {
+      "type": "wait",
+      "x": 3000
+    },
+    {
+      "type": "click",
+      "selector": "text=はい"
+    },
+    {
+      "type": "wait",
+      "x": 8000
+    },
+    {
+      "type": "fill",
+      "selector": "#input-username",
+      "value": "{{LOGIN_USER}}"
+    },
+    {
+      "type": "fill",
+      "selector": "#input-password",
+      "value": "{{LOGIN_PASS}}"
+    },
+    {
+      "type": "wait",
+      "x": 1000
+    },
+    {
+      "type": "click",
+      "selector": "#btn-simple-login"
+    },
+    {
+      "type": "wait",
+      "x": 15000
+    },
+    {
+      "type": "click",
+      "selector": "text=/専用スタンドあり/",
+      "comment": "オプション: 専用スタンドあり"
+    },
+    {
+      "type": "wait",
+      "x": 2000
+    },
+    {
+      "type": "click",
+      "selector": "text=配送先を選ぶ"
+    },
+    {
+      "type": "wait",
+      "x": 5000
+    },
+    {
+      "type": "click",
+      "selector": "text=/ゆうパケット/",
+      "comment": "配送方法: ゆうパケット"
+    },
+    {
+      "type": "wait",
+      "x": 2000
+    },
+    {
+      "type": "click",
+      "selector": "text=お支払いへ進む"
+    },
+    {
+      "type": "wait",
+      "x": 5000
+    },
+    {
+      "type": "click",
+      "selector": "text=/d払い/",
+      "comment": "支払い方法: d払い"
+    },
+    {
+      "type": "wait",
+      "x": 2000
+    },
+    {
+      "type": "click",
+      "selector": "text=ご注文内容を確認する"
+    },
+    {
+      "type": "wait",
+      "x": 5000
+    },
+    {
+      "type": "screenshotFullPage"
+    },
+    {
+      "type": "click",
+      "selector": "text=注文を確定する"
+    },
+    {
+      "type": "wait",
+      "x": 10000
+    },
+    {
+      "type": "screenshot"
+    },
+    {
+      "type": "click",
+      "selector": "text=閉じる"
+    },
+    {
+      "type": "wait",
+      "x": 2000
+    },
+    {
+      "type": "screenshot"
+    },
+    {
+      "type": "click",
+      "selector": "text=マイページへ"
+    },
+    {
+      "type": "wait",
+      "x": 5000
+    },
+    {
+      "type": "screenshot"
+    },
+    {
+      "type": "getCurrentUrl"
+    },
+    {
+      "type": "getTitle"
+    }
+  ]
+}
