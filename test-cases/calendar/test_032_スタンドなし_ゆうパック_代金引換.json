@@ -54,7 +54,7 @@
     {
       "type": "uploadFile",
       "selector": "input[type=file]",
-      "filePath": "/Users/kooooooich/work/mcp-playwright-server/src/images/anna-hunko-TjxjFl9nWlc-unsplash.jpg"
+      "filePath": "./assets/images/anna-hunko-TjxjFl9nWlc-unsplash.jpg"
     },
     {
       "type": "wait",
