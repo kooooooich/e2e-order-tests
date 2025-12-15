@@ -58,6 +58,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
         
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps chromium
+        
       - name: Run E2E tests
         run: |
           npm run test -- --dir=./test-cases/${{ github.event.inputs.test_pattern || 'calendar' }}
