@@ -147,6 +147,18 @@
       "x": 1000
     },
     {
+      "type": "wait",
+      "x": 1000
+    },
+    {
+      "type": "click",
+      "selector": "text=OK"
+    },
+    {
+      "type": "wait",
+      "x": 1000
+    },
+    {
       "type": "click",
       "selector": "text=ご注文内容を確認する"
     },

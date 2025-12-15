@@ -205,19 +205,49 @@ async function executeAction(
 }
 
 // ============================================
-// 価格取得
+// 価格取得（修正版）
 // ============================================
 
 async function extractPrice(page: Page): Promise<string | undefined> {
   try {
-    // 複数のセレクタパターンを試す
+    // 方法1: tr.total から取得（しまうまカレンダー用）
+    const totalRow = await page.$('tr.total');
+    if (totalRow) {
+      const text = await totalRow.textContent();
+      if (text) {
+        // 「合計 1,770円」のような形式から価格を抽出
+        const match = text.match(/([0-9,]+円)/);
+        if (match) {
+          return match[1];
+        }
+      }
+    }
+
+    // 方法2: 「合計」を含む行から取得
+    const rows = await page.$$('tr, .row, div');
+    for (const row of rows) {
+      const text = await row.textContent();
+      if (text && text.includes('合計')) {
+        const match = text.match(/([0-9,]+円)/);
+        if (match) {
+          return match[1];
+        }
+      }
+    }
+
+    // 方法3: ページ全体から「合計」+価格パターンを探す
+    const pageText = await page.evaluate(() => document.body.innerText);
+    const priceMatch = pageText.match(/合計\s*([0-9,]+円)/);
+    if (priceMatch) {
+      return priceMatch[1];
+    }
+
+    // 方法4: 複数のセレクタパターンを試す
     const priceSelectors = [
       '.total-price',
       '.price-total',
-      '[class*="total"]',
-      '[class*="price"]',
-      'text=/合計.*円/',
-      'text=/¥[0-9,]+/',
+      '[class*="total"] span.text',
+      '.total span',
     ];
 
     for (const selector of priceSelectors) {
@@ -225,20 +255,13 @@ async function extractPrice(page: Page): Promise<string | undefined> {
         const element = await page.$(selector);
         if (element) {
           const text = await element.textContent();
-          if (text && /[0-9,]+円|¥[0-9,]+/.test(text)) {
+          if (text && /[0-9,]+円/.test(text)) {
             return text.trim();
           }
         }
       } catch {
         continue;
       }
-    }
-
-    // ページ全体から価格パターンを探す
-    const pageContent = await page.content();
-    const priceMatch = pageContent.match(/合計[：:]\s*([0-9,]+円|¥[0-9,]+)/);
-    if (priceMatch) {
-      return priceMatch[1];
     }
 
     return undefined;
@@ -301,9 +324,12 @@ async function runTest(testCase: TestCase): Promise<TestResult> {
         screenshots.push(result.screenshot);
       }
 
-      // 注文確認画面で価格を取得
+      // 注文確認画面で価格を取得（screenshotFullPageの後）
       if (action.type === 'screenshotFullPage') {
         price = await extractPrice(page);
+        if (price) {
+          console.log(`  [${testCase.testInfo.id}] Extracted price: ${price}`);
+        }
       }
     }
 
