@@ -1,9 +1,9 @@
 {
   "testInfo": {
-    "id": "test_036",
+    "id": "test_020",
     "option": "専用スタンドなし",
     "shipping": "ゆうパック",
-    "payment": "d払い"
+    "payment": "コンビニ後払い"
   },
   "url": "https://calendar.shimaumaprint.com/edit/",
   "credentialKey": "dev",
@@ -58,7 +58,7 @@
     },
     {
       "type": "wait",
-      "x": 1000
+      "x": 3000
     },
     {
       "type": "click",
@@ -66,7 +66,7 @@
     },
     {
       "type": "wait",
-      "x": 1000
+      "x": 3000
     },
     {
       "type": "evaluate",
@@ -82,7 +82,7 @@
     },
     {
       "type": "wait",
-      "x": 500
+      "x": 2000
     },
     {
       "type": "fill",
@@ -96,7 +96,7 @@
     },
     {
       "type": "wait",
-      "x": 1000
+      "x": 500
     },
     {
       "type": "click",
@@ -104,16 +104,15 @@
     },
     {
       "type": "wait",
-      "x": 1000
+      "x": 10000
     },
     {
       "type": "click",
-      "selector": "text=/専用スタンドなし/",
-      "comment": "オプション: 専用スタンドなし"
+      "selector": ".box-wrapper.option:not(.rounded-top) button"
     },
     {
       "type": "wait",
-      "x": 500
+      "x": 2000
     },
     {
       "type": "click",
@@ -121,12 +120,11 @@
     },
     {
       "type": "wait",
-      "x": 1500
+      "x": 3000
     },
     {
       "type": "click",
-      "selector": "text=/ゆうパック/",
-      "comment": "配送方法: ゆうパック"
+      "selector": "text=/ゆうパック/"
     },
     {
       "type": "wait",
@@ -142,12 +140,11 @@
     },
     {
       "type": "click",
-      "selector": "text=/d払い/",
-      "comment": "支払い方法: d払い"
+      "selector": "text=/コンビニ後払い/"
     },
     {
       "type": "wait",
-      "x": 500
+      "x": 1000
     },
     {
       "type": "click",
@@ -155,7 +152,7 @@
     },
     {
       "type": "wait",
-      "x": 1500
+      "x": 2000
     },
     {
       "type": "screenshotFullPage"
@@ -166,7 +163,7 @@
     },
     {
       "type": "wait",
-      "x": 1000
+      "x": 3000
     },
     {
       "type": "screenshot"
