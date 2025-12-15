@@ -177,7 +177,8 @@ async function executeAction(
       break;
 
     case 'uploadFile':
-      await page.setInputFiles(action.selector!, action.filePath!);
+      const absoluteFilePath = path.resolve(process.cwd(), action.filePath!);
+      await page.setInputFiles(action.selector!, absoluteFilePath);
       break;
 
     case 'uploadFiles':
