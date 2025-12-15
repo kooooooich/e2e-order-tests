@@ -1,0 +1,606 @@
+[
+  {
+    "testId": "test_001",
+    "testInfo": {
+      "id": "test_001",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=注文を確定する')\n",
+    "screenshots": [
+      "results/screenshots/test_001_001.png",
+      "results/screenshots/test_001_error.png"
+    ],
+    "duration": 75290,
+    "timestamp": "2025-12-15T04:39:23.860Z"
+  },
+  {
+    "testId": "test_002",
+    "testInfo": {
+      "id": "test_002",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうメール",
+      "payment": "代金引換"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/代金引換/')\n",
+    "screenshots": [
+      "results/screenshots/test_002_error.png"
+    ],
+    "duration": 69552,
+    "timestamp": "2025-12-15T04:40:33.445Z"
+  },
+  {
+    "testId": "test_003",
+    "testInfo": {
+      "id": "test_003",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ご注文内容を確認する')\n    - locator resolved to <span data-v-5971ae94=\"\" class=\"text m-large white\">ご注文内容を確認する</span>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-54413652=\"\" id=\"modal-wrapper\" class=\"fade-enter-active fade-enter-to\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-54413652=\"\" id=\"modal-wrapper\" class=\"fade-enter-active fade-enter-to\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-54413652=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-54413652=\"\" id=\"modal-wrapper\" class=\"fade-leave-active fade-leave-to\">…</div> intercepts pointer events\n  55 × retrying click action\n       - waiting 500ms\n       - waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_003_error.png"
+    ],
+    "duration": 68488,
+    "timestamp": "2025-12-15T04:41:41.963Z"
+  },
+  {
+    "testId": "test_004",
+    "testInfo": {
+      "id": "test_004",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_004_001.png",
+      "results/screenshots/test_004_002.png",
+      "results/screenshots/test_004_003.png",
+      "results/screenshots/test_004_004.png"
+    ],
+    "duration": 51487,
+    "timestamp": "2025-12-15T04:42:33.478Z"
+  },
+  {
+    "testId": "test_005",
+    "testInfo": {
+      "id": "test_005",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_005_001.png",
+      "results/screenshots/test_005_002.png",
+      "results/screenshots/test_005_003.png",
+      "results/screenshots/test_005_004.png"
+    ],
+    "duration": 47725,
+    "timestamp": "2025-12-15T04:43:21.241Z"
+  },
+  {
+    "testId": "test_006",
+    "testInfo": {
+      "id": "test_006",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_006_001.png",
+      "results/screenshots/test_006_002.png",
+      "results/screenshots/test_006_003.png",
+      "results/screenshots/test_006_004.png"
+    ],
+    "duration": 51953,
+    "timestamp": "2025-12-15T04:44:13.273Z"
+  },
+  {
+    "testId": "test_007",
+    "testInfo": {
+      "id": "test_007",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_007_error.png"
+    ],
+    "duration": 62705,
+    "timestamp": "2025-12-15T04:45:16.014Z"
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "代金引換"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_008_error.png"
+    ],
+    "duration": 63085,
+    "timestamp": "2025-12-15T04:46:19.130Z"
+  },
+  {
+    "testId": "test_009",
+    "testInfo": {
+      "id": "test_009",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_009_error.png"
+    ],
+    "duration": 63413,
+    "timestamp": "2025-12-15T04:47:22.578Z"
+  },
+  {
+    "testId": "test_010",
+    "testInfo": {
+      "id": "test_010",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_010_error.png"
+    ],
+    "duration": 64204,
+    "timestamp": "2025-12-15T04:48:26.856Z"
+  },
+  {
+    "testId": "test_011",
+    "testInfo": {
+      "id": "test_011",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_011_error.png"
+    ],
+    "duration": 63231,
+    "timestamp": "2025-12-15T04:49:30.120Z"
+  },
+  {
+    "testId": "test_012",
+    "testInfo": {
+      "id": "test_012",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_012_error.png"
+    ],
+    "duration": 64223,
+    "timestamp": "2025-12-15T04:50:34.418Z"
+  },
+  {
+    "testId": "test_013",
+    "testInfo": {
+      "id": "test_013",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=注文を確定する')\n",
+    "screenshots": [
+      "results/screenshots/test_013_001.png",
+      "results/screenshots/test_013_error.png"
+    ],
+    "duration": 70939,
+    "timestamp": "2025-12-15T04:51:45.433Z"
+  },
+  {
+    "testId": "test_014",
+    "testInfo": {
+      "id": "test_014",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代金引換"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=お支払いへ進む')\n    - locator resolved to <span data-v-5971ae94=\"\" class=\"text m-large white\">お支払いへ進む</span>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-54413652=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-54413652=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    17 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-v-54413652=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\" class=\"fade-enter-active fade-enter-to\">…</div> intercepts pointer events\n  38 × retrying click action\n       - waiting 500ms\n       - waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_014_error.png"
+    ],
+    "duration": 64295,
+    "timestamp": "2025-12-15T04:52:49.760Z"
+  },
+  {
+    "testId": "test_015",
+    "testInfo": {
+      "id": "test_015",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ご注文内容を確認する')\n    - locator resolved to <span data-v-5971ae94=\"\" class=\"text m-large white\">ご注文内容を確認する</span>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-54413652=\"\" id=\"modal-wrapper\" class=\"fade-enter-active fade-enter-to\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-54413652=\"\" id=\"modal-wrapper\" class=\"fade-enter-active fade-enter-to\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-54413652=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-54413652=\"\" id=\"modal-wrapper\" class=\"fade-leave-active fade-leave-to\">…</div> intercepts pointer events\n  55 × retrying click action\n       - waiting 500ms\n       - waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_015_error.png"
+    ],
+    "duration": 68115,
+    "timestamp": "2025-12-15T04:53:57.948Z"
+  },
+  {
+    "testId": "test_016",
+    "testInfo": {
+      "id": "test_016",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_016_001.png",
+      "results/screenshots/test_016_002.png",
+      "results/screenshots/test_016_003.png",
+      "results/screenshots/test_016_004.png"
+    ],
+    "duration": 50992,
+    "timestamp": "2025-12-15T04:54:48.966Z"
+  },
+  {
+    "testId": "test_017",
+    "testInfo": {
+      "id": "test_017",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_017_001.png",
+      "results/screenshots/test_017_002.png",
+      "results/screenshots/test_017_003.png",
+      "results/screenshots/test_017_004.png"
+    ],
+    "duration": 49116,
+    "timestamp": "2025-12-15T04:55:38.162Z"
+  },
+  {
+    "testId": "test_018",
+    "testInfo": {
+      "id": "test_018",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_018_001.png",
+      "results/screenshots/test_018_002.png",
+      "results/screenshots/test_018_003.png",
+      "results/screenshots/test_018_004.png"
+    ],
+    "duration": 48269,
+    "timestamp": "2025-12-15T04:56:26.510Z"
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=注文を確定する')\n",
+    "screenshots": [
+      "results/screenshots/test_019_001.png",
+      "results/screenshots/test_019_error.png"
+    ],
+    "duration": 70931,
+    "timestamp": "2025-12-15T04:57:37.537Z"
+  },
+  {
+    "testId": "test_020",
+    "testInfo": {
+      "id": "test_020",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "代金引換"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/代金引換/')\n",
+    "screenshots": [
+      "results/screenshots/test_020_error.png"
+    ],
+    "duration": 66513,
+    "timestamp": "2025-12-15T04:58:44.085Z"
+  },
+  {
+    "testId": "test_021",
+    "testInfo": {
+      "id": "test_021",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ご注文内容を確認する')\n    - locator resolved to <span data-v-5971ae94=\"\" class=\"text m-large white\">ご注文内容を確認する</span>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-54413652=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-54413652=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-54413652=\"\" id=\"modal-wrapper\" class=\"fade-leave-active fade-leave-to\">…</div> intercepts pointer events\n  55 × retrying click action\n       - waiting 500ms\n       - waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_021_error.png"
+    ],
+    "duration": 69917,
+    "timestamp": "2025-12-15T04:59:54.032Z"
+  },
+  {
+    "testId": "test_022",
+    "testInfo": {
+      "id": "test_022",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_022_001.png",
+      "results/screenshots/test_022_002.png",
+      "results/screenshots/test_022_003.png",
+      "results/screenshots/test_022_004.png"
+    ],
+    "duration": 48542,
+    "timestamp": "2025-12-15T05:00:42.600Z"
+  },
+  {
+    "testId": "test_023",
+    "testInfo": {
+      "id": "test_023",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_023_001.png",
+      "results/screenshots/test_023_002.png",
+      "results/screenshots/test_023_003.png",
+      "results/screenshots/test_023_004.png"
+    ],
+    "duration": 49683,
+    "timestamp": "2025-12-15T05:01:32.364Z"
+  },
+  {
+    "testId": "test_024",
+    "testInfo": {
+      "id": "test_024",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_024_001.png",
+      "results/screenshots/test_024_002.png",
+      "results/screenshots/test_024_003.png",
+      "results/screenshots/test_024_004.png"
+    ],
+    "duration": 48198,
+    "timestamp": "2025-12-15T05:02:20.646Z"
+  },
+  {
+    "testId": "test_025",
+    "testInfo": {
+      "id": "test_025",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_025_error.png"
+    ],
+    "duration": 63317,
+    "timestamp": "2025-12-15T05:03:24.007Z"
+  },
+  {
+    "testId": "test_026",
+    "testInfo": {
+      "id": "test_026",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパケット",
+      "payment": "代金引換"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_026_error.png"
+    ],
+    "duration": 63538,
+    "timestamp": "2025-12-15T05:04:27.618Z"
+  },
+  {
+    "testId": "test_027",
+    "testInfo": {
+      "id": "test_027",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_027_error.png"
+    ],
+    "duration": 63686,
+    "timestamp": "2025-12-15T05:05:31.389Z"
+  },
+  {
+    "testId": "test_028",
+    "testInfo": {
+      "id": "test_028",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_028_error.png"
+    ],
+    "duration": 64072,
+    "timestamp": "2025-12-15T05:06:35.549Z"
+  },
+  {
+    "testId": "test_029",
+    "testInfo": {
+      "id": "test_029",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_029_error.png"
+    ],
+    "duration": 64298,
+    "timestamp": "2025-12-15T05:07:39.878Z"
+  },
+  {
+    "testId": "test_030",
+    "testInfo": {
+      "id": "test_030",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n",
+    "screenshots": [
+      "results/screenshots/test_030_error.png"
+    ],
+    "duration": 64350,
+    "timestamp": "2025-12-15T05:08:44.258Z"
+  },
+  {
+    "testId": "test_031",
+    "testInfo": {
+      "id": "test_031",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=注文を確定する')\n",
+    "screenshots": [
+      "results/screenshots/test_031_001.png",
+      "results/screenshots/test_031_error.png"
+    ],
+    "duration": 71514,
+    "timestamp": "2025-12-15T05:09:55.852Z"
+  },
+  {
+    "testId": "test_032",
+    "testInfo": {
+      "id": "test_032",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代金引換"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/代金引換/')\n",
+    "screenshots": [
+      "results/screenshots/test_032_error.png"
+    ],
+    "duration": 67807,
+    "timestamp": "2025-12-15T05:11:03.687Z"
+  },
+  {
+    "testId": "test_033",
+    "testInfo": {
+      "id": "test_033",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ご注文内容を確認する')\n    - locator resolved to <span data-v-5971ae94=\"\" class=\"text m-large white\">ご注文内容を確認する</span>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-54413652=\"\" id=\"modal-wrapper\" class=\"fade-enter-active fade-enter-to\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-54413652=\"\" id=\"modal-wrapper\" class=\"fade-enter-active fade-enter-to\">…</div> intercepts pointer events\n  2 × retrying click action\n      - waiting 100ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-54413652=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  55 × retrying click action\n       - waiting 500ms\n       - waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_033_error.png"
+    ],
+    "duration": 68273,
+    "timestamp": "2025-12-15T05:12:11.992Z"
+  },
+  {
+    "testId": "test_034",
+    "testInfo": {
+      "id": "test_034",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_034_001.png",
+      "results/screenshots/test_034_002.png",
+      "results/screenshots/test_034_003.png",
+      "results/screenshots/test_034_004.png"
+    ],
+    "duration": 50666,
+    "timestamp": "2025-12-15T05:13:02.687Z"
+  },
+  {
+    "testId": "test_035",
+    "testInfo": {
+      "id": "test_035",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_035_001.png",
+      "results/screenshots/test_035_002.png",
+      "results/screenshots/test_035_003.png",
+      "results/screenshots/test_035_004.png"
+    ],
+    "duration": 48952,
+    "timestamp": "2025-12-15T05:13:51.719Z"
+  },
+  {
+    "testId": "test_036",
+    "testInfo": {
+      "id": "test_036",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_036_001.png",
+      "results/screenshots/test_036_002.png",
+      "results/screenshots/test_036_003.png",
+      "results/screenshots/test_036_004.png"
+    ],
+    "duration": 49316,
+    "timestamp": "2025-12-15T05:14:41.118Z"
+  }
+]
