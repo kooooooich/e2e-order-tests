@@ -1,0 +1,463 @@
+[
+  {
+    "testId": "test_001",
+    "testInfo": {
+      "id": "test_001",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_001_001.png",
+      "results/screenshots/test_001_002.png",
+      "results/screenshots/test_001_003.png",
+      "results/screenshots/test_001_004.png"
+    ],
+    "duration": 69040,
+    "timestamp": "2025-12-15T07:37:19.802Z"
+  },
+  {
+    "testId": "test_002",
+    "testInfo": {
+      "id": "test_002",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=注文を確定する')\n",
+    "screenshots": [
+      "results/screenshots/test_002_001.png",
+      "results/screenshots/test_002_error.png"
+    ],
+    "duration": 75818,
+    "timestamp": "2025-12-15T07:38:35.657Z"
+  },
+  {
+    "testId": "test_002",
+    "testInfo": {
+      "id": "test_002",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "代金引換"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/代金引換/')\n",
+    "screenshots": [
+      "results/screenshots/test_002_error.png"
+    ],
+    "duration": 71637,
+    "timestamp": "2025-12-15T07:39:47.321Z"
+  },
+  {
+    "testId": "test_003",
+    "testInfo": {
+      "id": "test_003",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_003_001.png",
+      "results/screenshots/test_003_002.png",
+      "results/screenshots/test_003_003.png",
+      "results/screenshots/test_003_004.png"
+    ],
+    "duration": 56260,
+    "timestamp": "2025-12-15T07:40:43.610Z"
+  },
+  {
+    "testId": "test_004",
+    "testInfo": {
+      "id": "test_004",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_004_001.png",
+      "results/screenshots/test_004_002.png",
+      "results/screenshots/test_004_003.png",
+      "results/screenshots/test_004_004.png"
+    ],
+    "duration": 54152,
+    "timestamp": "2025-12-15T07:41:37.841Z"
+  },
+  {
+    "testId": "test_005",
+    "testInfo": {
+      "id": "test_005",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_005_001.png",
+      "results/screenshots/test_005_002.png",
+      "results/screenshots/test_005_003.png",
+      "results/screenshots/test_005_004.png"
+    ],
+    "duration": 54483,
+    "timestamp": "2025-12-15T07:42:32.406Z"
+  },
+  {
+    "testId": "test_006",
+    "testInfo": {
+      "id": "test_006",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_006_001.png",
+      "results/screenshots/test_006_002.png",
+      "results/screenshots/test_006_003.png",
+      "results/screenshots/test_006_004.png"
+    ],
+    "duration": 53732,
+    "timestamp": "2025-12-15T07:43:26.219Z"
+  },
+  {
+    "testId": "test_007",
+    "testInfo": {
+      "id": "test_007",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_007_001.png",
+      "results/screenshots/test_007_002.png",
+      "results/screenshots/test_007_003.png",
+      "results/screenshots/test_007_004.png"
+    ],
+    "duration": 65243,
+    "timestamp": "2025-12-15T07:44:31.550Z"
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_008_001.png",
+      "results/screenshots/test_008_002.png",
+      "results/screenshots/test_008_003.png",
+      "results/screenshots/test_008_004.png"
+    ],
+    "duration": 54552,
+    "timestamp": "2025-12-15T07:45:26.130Z"
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代金引換"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/代金引換/')\n",
+    "screenshots": [
+      "results/screenshots/test_008_error.png"
+    ],
+    "duration": 70981,
+    "timestamp": "2025-12-15T07:46:37.189Z"
+  },
+  {
+    "testId": "test_009",
+    "testInfo": {
+      "id": "test_009",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_009_001.png",
+      "results/screenshots/test_009_002.png",
+      "results/screenshots/test_009_003.png",
+      "results/screenshots/test_009_004.png"
+    ],
+    "duration": 55924,
+    "timestamp": "2025-12-15T07:47:33.142Z"
+  },
+  {
+    "testId": "test_010",
+    "testInfo": {
+      "id": "test_010",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_010_001.png",
+      "results/screenshots/test_010_002.png",
+      "results/screenshots/test_010_003.png",
+      "results/screenshots/test_010_004.png"
+    ],
+    "duration": 50280,
+    "timestamp": "2025-12-15T07:48:23.507Z"
+  },
+  {
+    "testId": "test_011",
+    "testInfo": {
+      "id": "test_011",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_011_001.png",
+      "results/screenshots/test_011_002.png",
+      "results/screenshots/test_011_003.png",
+      "results/screenshots/test_011_004.png"
+    ],
+    "duration": 53793,
+    "timestamp": "2025-12-15T07:49:17.388Z"
+  },
+  {
+    "testId": "test_012",
+    "testInfo": {
+      "id": "test_012",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_012_001.png",
+      "results/screenshots/test_012_002.png",
+      "results/screenshots/test_012_003.png",
+      "results/screenshots/test_012_004.png"
+    ],
+    "duration": 54782,
+    "timestamp": "2025-12-15T07:50:12.253Z"
+  },
+  {
+    "testId": "test_013",
+    "testInfo": {
+      "id": "test_013",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_013_001.png",
+      "results/screenshots/test_013_002.png",
+      "results/screenshots/test_013_003.png",
+      "results/screenshots/test_013_004.png"
+    ],
+    "duration": 62264,
+    "timestamp": "2025-12-15T07:51:14.600Z"
+  },
+  {
+    "testId": "test_014",
+    "testInfo": {
+      "id": "test_014",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_014_001.png",
+      "results/screenshots/test_014_002.png",
+      "results/screenshots/test_014_003.png",
+      "results/screenshots/test_014_004.png"
+    ],
+    "duration": 56475,
+    "timestamp": "2025-12-15T07:52:11.164Z"
+  },
+  {
+    "testId": "test_015",
+    "testInfo": {
+      "id": "test_015",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_015_001.png",
+      "results/screenshots/test_015_002.png",
+      "results/screenshots/test_015_003.png",
+      "results/screenshots/test_015_004.png"
+    ],
+    "duration": 53501,
+    "timestamp": "2025-12-15T07:53:04.741Z"
+  },
+  {
+    "testId": "test_016",
+    "testInfo": {
+      "id": "test_016",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_016_001.png",
+      "results/screenshots/test_016_002.png",
+      "results/screenshots/test_016_003.png",
+      "results/screenshots/test_016_004.png"
+    ],
+    "duration": 53599,
+    "timestamp": "2025-12-15T07:53:58.422Z"
+  },
+  {
+    "testId": "test_017",
+    "testInfo": {
+      "id": "test_017",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_017_001.png",
+      "results/screenshots/test_017_002.png",
+      "results/screenshots/test_017_003.png",
+      "results/screenshots/test_017_004.png"
+    ],
+    "duration": 53206,
+    "timestamp": "2025-12-15T07:54:51.709Z"
+  },
+  {
+    "testId": "test_018",
+    "testInfo": {
+      "id": "test_018",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_018_001.png",
+      "results/screenshots/test_018_002.png",
+      "results/screenshots/test_018_003.png",
+      "results/screenshots/test_018_004.png"
+    ],
+    "duration": 62917,
+    "timestamp": "2025-12-15T07:55:54.706Z"
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_019_001.png",
+      "results/screenshots/test_019_002.png",
+      "results/screenshots/test_019_003.png",
+      "results/screenshots/test_019_004.png"
+    ],
+    "duration": 51218,
+    "timestamp": "2025-12-15T07:56:46.003Z"
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代金引換"
+    },
+    "success": false,
+    "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/代金引換/')\n",
+    "screenshots": [
+      "results/screenshots/test_019_error.png"
+    ],
+    "duration": 71585,
+    "timestamp": "2025-12-15T07:57:57.679Z"
+  },
+  {
+    "testId": "test_020",
+    "testInfo": {
+      "id": "test_020",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_020_001.png",
+      "results/screenshots/test_020_002.png",
+      "results/screenshots/test_020_003.png",
+      "results/screenshots/test_020_004.png"
+    ],
+    "duration": 54491,
+    "timestamp": "2025-12-15T07:58:52.199Z"
+  },
+  {
+    "testId": "test_021",
+    "testInfo": {
+      "id": "test_021",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_021_001.png",
+      "results/screenshots/test_021_002.png",
+      "results/screenshots/test_021_003.png",
+      "results/screenshots/test_021_004.png"
+    ],
+    "duration": 51835,
+    "timestamp": "2025-12-15T07:59:44.113Z"
+  },
+  {
+    "testId": "test_022",
+    "testInfo": {
+      "id": "test_022",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_022_001.png",
+      "results/screenshots/test_022_002.png",
+      "results/screenshots/test_022_003.png",
+      "results/screenshots/test_022_004.png"
+    ],
+    "duration": 53917,
+    "timestamp": "2025-12-15T08:00:38.112Z"
+  },
+  {
+    "testId": "test_023",
+    "testInfo": {
+      "id": "test_023",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "screenshots": [
+      "results/screenshots/test_023_001.png",
+      "results/screenshots/test_023_002.png",
+      "results/screenshots/test_023_003.png",
+      "results/screenshots/test_023_004.png"
+    ],
+    "duration": 54486,
+    "timestamp": "2025-12-15T08:01:32.676Z"
+  }
+]
