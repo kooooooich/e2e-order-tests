@@ -1,9 +1,9 @@
 {
   "testInfo": {
-    "id": "test_012",
-    "option": "専用スタンドあり",
+    "id": "test_019",
+    "option": "専用スタンドなし",
     "shipping": "ゆうパック",
-    "payment": "d払い"
+    "payment": "コンビニ後払い"
   },
   "url": "https://calendar.shimaumaprint.com/edit/",
   "credentialKey": "dev",
@@ -125,7 +125,7 @@
     },
     {
       "type": "click",
-      "selector": ".box-wrapper.option.rounded-top button"
+      "selector": ".box-wrapper.option:not(.rounded-top) button"
     },
     {
       "type": "waitForSelector",
@@ -156,12 +156,21 @@
     },
     {
       "type": "waitForSelector",
-      "selector": "text=/d払い/",
+      "selector": "text=/コンビニ後払い/",
       "timeout": 30000
     },
     {
       "type": "click",
-      "selector": "text=/d払い/"
+      "selector": "text=/コンビニ後払い/"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "text=OK",
+      "timeout": 10000
+    },
+    {
+      "type": "click",
+      "selector": "text=OK"
     },
     {
       "type": "waitForSelector",

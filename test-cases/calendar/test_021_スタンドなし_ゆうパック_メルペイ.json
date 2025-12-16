@@ -1,7 +1,7 @@
 {
   "testInfo": {
-    "id": "test_011",
-    "option": "専用スタンドあり",
+    "id": "test_021",
+    "option": "専用スタンドなし",
     "shipping": "ゆうパック",
     "payment": "メルペイ"
   },
@@ -125,7 +125,7 @@
     },
     {
       "type": "click",
-      "selector": ".box-wrapper.option.rounded-top button"
+      "selector": ".box-wrapper.option:not(.rounded-top) button"
     },
     {
       "type": "waitForSelector",

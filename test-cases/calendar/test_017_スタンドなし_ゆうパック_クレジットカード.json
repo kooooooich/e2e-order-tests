@@ -1,9 +1,9 @@
 {
   "testInfo": {
-    "id": "test_022",
+    "id": "test_017",
     "option": "専用スタンドなし",
     "shipping": "ゆうパック",
-    "payment": "メルペイ"
+    "payment": "クレジットカード"
   },
   "url": "https://calendar.shimaumaprint.com/edit/",
   "credentialKey": "dev",
@@ -156,17 +156,65 @@
     },
     {
       "type": "waitForSelector",
-      "selector": "text=/メルペイ/",
+      "selector": "text=/クレジットカード/",
       "timeout": 30000
     },
     {
       "type": "click",
-      "selector": "text=/メルペイ/"
+      "selector": "text=/クレジットカード/"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "text=新しいカードを使う",
+      "timeout": 10000
+    },
+    {
+      "type": "click",
+      "selector": "text=新しいカードを使う"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "input[type=text][maxlength='16']",
+      "timeout": 10000
+    },
+    {
+      "type": "fill",
+      "selector": "input[type=text][maxlength='16']",
+      "value": "4100000000000100"
+    },
+    {
+      "type": "fill",
+      "selector": "input[type=text][maxlength='50']",
+      "value": "hoge"
+    },
+    {
+      "type": "select",
+      "selector": "select >> nth=0",
+      "value": "12"
+    },
+    {
+      "type": "select",
+      "selector": "select >> nth=1",
+      "value": "27"
+    },
+    {
+      "type": "fill",
+      "selector": "input[type=text][maxlength='4']",
+      "value": "123"
+    },
+    {
+      "type": "waitForSelector",
+      "selector": "text=このカードを使う",
+      "timeout": 10000
+    },
+    {
+      "type": "click",
+      "selector": "text=このカードを使う"
     },
     {
       "type": "waitForSelector",
       "selector": "text=ご注文内容を確認する",
-      "timeout": 10000
+      "timeout": 30000
     },
     {
       "type": "click",

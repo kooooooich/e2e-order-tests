@@ -1,9 +1,9 @@
 {
   "testInfo": {
-    "id": "test_016",
-    "option": "専用スタンドなし",
-    "shipping": "ゆうメール",
-    "payment": "メルペイ"
+    "id": "test_007",
+    "option": "専用スタンドあり",
+    "shipping": "ゆうパック",
+    "payment": "代引き"
   },
   "url": "https://calendar.shimaumaprint.com/edit/",
   "credentialKey": "dev",
@@ -125,7 +125,7 @@
     },
     {
       "type": "click",
-      "selector": ".box-wrapper.option:not(.rounded-top) button"
+      "selector": ".box-wrapper.option.rounded-top button"
     },
     {
       "type": "waitForSelector",
@@ -138,12 +138,12 @@
     },
     {
       "type": "waitForSelector",
-      "selector": "text=/メール便/",
+      "selector": "text=/ゆうパック/",
       "timeout": 30000
     },
     {
       "type": "click",
-      "selector": "text=/メール便/"
+      "selector": "text=/ゆうパック/"
     },
     {
       "type": "waitForSelector",
@@ -156,12 +156,12 @@
     },
     {
       "type": "waitForSelector",
-      "selector": "text=/メルペイ/",
+      "selector": "text=/代引き/",
       "timeout": 30000
     },
     {
       "type": "click",
-      "selector": "text=/メルペイ/"
+      "selector": "text=/代引き/"
     },
     {
       "type": "waitForSelector",
