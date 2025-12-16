@@ -1,0 +1,370 @@
+[
+  {
+    "testId": "test_001",
+    "testInfo": {
+      "id": "test_001",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_001_error.png"
+    ],
+    "duration": 17814,
+    "timestamp": "2025-12-16T06:37:02.660Z"
+  },
+  {
+    "testId": "test_002",
+    "testInfo": {
+      "id": "test_002",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_002_error.png"
+    ],
+    "duration": 15775,
+    "timestamp": "2025-12-16T06:37:01.628Z"
+  },
+  {
+    "testId": "test_003",
+    "testInfo": {
+      "id": "test_003",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_003_error.png"
+    ],
+    "duration": 16045,
+    "timestamp": "2025-12-16T06:37:02.898Z"
+  },
+  {
+    "testId": "test_004",
+    "testInfo": {
+      "id": "test_004",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_004_error.png"
+    ],
+    "duration": 15351,
+    "timestamp": "2025-12-16T06:37:17.011Z"
+  },
+  {
+    "testId": "test_005",
+    "testInfo": {
+      "id": "test_005",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_005_error.png"
+    ],
+    "duration": 15608,
+    "timestamp": "2025-12-16T06:37:18.292Z"
+  },
+  {
+    "testId": "test_006",
+    "testInfo": {
+      "id": "test_006",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_006_error.png"
+    ],
+    "duration": 15795,
+    "timestamp": "2025-12-16T06:37:18.719Z"
+  },
+  {
+    "testId": "test_007",
+    "testInfo": {
+      "id": "test_007",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_007_error.png"
+    ],
+    "duration": 15538,
+    "timestamp": "2025-12-16T06:37:32.576Z"
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_008_error.png"
+    ],
+    "duration": 15490,
+    "timestamp": "2025-12-16T06:37:33.826Z"
+  },
+  {
+    "testId": "test_009",
+    "testInfo": {
+      "id": "test_009",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_009_error.png"
+    ],
+    "duration": 15584,
+    "timestamp": "2025-12-16T06:37:34.330Z"
+  },
+  {
+    "testId": "test_010",
+    "testInfo": {
+      "id": "test_010",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_010_error.png"
+    ],
+    "duration": 15405,
+    "timestamp": "2025-12-16T06:37:48.008Z"
+  },
+  {
+    "testId": "test_011",
+    "testInfo": {
+      "id": "test_011",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_011_error.png"
+    ],
+    "duration": 15390,
+    "timestamp": "2025-12-16T06:37:49.241Z"
+  },
+  {
+    "testId": "test_012",
+    "testInfo": {
+      "id": "test_012",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_012_error.png"
+    ],
+    "duration": 15492,
+    "timestamp": "2025-12-16T06:37:49.845Z"
+  },
+  {
+    "testId": "test_013",
+    "testInfo": {
+      "id": "test_013",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_013_error.png"
+    ],
+    "duration": 15493,
+    "timestamp": "2025-12-16T06:38:03.525Z"
+  },
+  {
+    "testId": "test_014",
+    "testInfo": {
+      "id": "test_014",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_014_error.png"
+    ],
+    "duration": 15480,
+    "timestamp": "2025-12-16T06:38:04.747Z"
+  },
+  {
+    "testId": "test_015",
+    "testInfo": {
+      "id": "test_015",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_015_error.png"
+    ],
+    "duration": 15454,
+    "timestamp": "2025-12-16T06:38:05.325Z"
+  },
+  {
+    "testId": "test_016",
+    "testInfo": {
+      "id": "test_016",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_016_error.png"
+    ],
+    "duration": 15519,
+    "timestamp": "2025-12-16T06:38:19.069Z"
+  },
+  {
+    "testId": "test_017",
+    "testInfo": {
+      "id": "test_017",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_017_error.png"
+    ],
+    "duration": 15435,
+    "timestamp": "2025-12-16T06:38:20.207Z"
+  },
+  {
+    "testId": "test_018",
+    "testInfo": {
+      "id": "test_018",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_018_error.png"
+    ],
+    "duration": 15508,
+    "timestamp": "2025-12-16T06:38:20.858Z"
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_019_error.png"
+    ],
+    "duration": 15508,
+    "timestamp": "2025-12-16T06:38:34.607Z"
+  },
+  {
+    "testId": "test_020",
+    "testInfo": {
+      "id": "test_020",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_020_error.png"
+    ],
+    "duration": 15437,
+    "timestamp": "2025-12-16T06:38:35.674Z"
+  },
+  {
+    "testId": "test_021",
+    "testInfo": {
+      "id": "test_021",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_021_error.png"
+    ],
+    "duration": 15508,
+    "timestamp": "2025-12-16T06:38:36.391Z"
+  },
+  {
+    "testId": "test_022",
+    "testInfo": {
+      "id": "test_022",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_022_error.png"
+    ],
+    "duration": 15508,
+    "timestamp": "2025-12-16T06:38:50.140Z"
+  },
+  {
+    "testId": "test_023",
+    "testInfo": {
+      "id": "test_023",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[type=file]') to be visible\n    25 × locator resolved to hidden <input multiple type=\"file\" accept=\"image/png, image/jpeg, image/heic, image/heif\"/>\n",
+    "screenshots": [
+      "results/screenshots/test_023_error.png"
+    ],
+    "duration": 15321,
+    "timestamp": "2025-12-16T06:38:51.021Z"
+  }
+]
