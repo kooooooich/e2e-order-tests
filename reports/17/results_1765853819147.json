@@ -1,0 +1,414 @@
+[
+  {
+    "testId": "test_001",
+    "testInfo": {
+      "id": "test_001",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "1,770円",
+    "screenshots": [
+      "results/screenshots/test_001_001.png",
+      "results/screenshots/test_001_002.png",
+      "results/screenshots/test_001_003.png",
+      "results/screenshots/test_001_004.png"
+    ],
+    "duration": 102321,
+    "timestamp": "2025-12-16T02:42:26.587Z"
+  },
+  {
+    "testId": "test_003",
+    "testInfo": {
+      "id": "test_003",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('.box-wrapper.option.rounded-top button')\n    - locator resolved to <button class=\"\" data-v-fa95870c=\"\"></button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  2 × retrying click action\n      - waiting 100ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  4 × retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_003_error.png"
+    ],
+    "duration": 105570,
+    "timestamp": "2025-12-16T02:42:31.844Z"
+  },
+  {
+    "testId": "test_004",
+    "testInfo": {
+      "id": "test_004",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_004_error.png"
+    ],
+    "duration": 110904,
+    "timestamp": "2025-12-16T02:44:18.522Z"
+  },
+  {
+    "testId": "test_005",
+    "testInfo": {
+      "id": "test_005",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,770円",
+    "screenshots": [
+      "results/screenshots/test_005_001.png",
+      "results/screenshots/test_005_002.png",
+      "results/screenshots/test_005_003.png",
+      "results/screenshots/test_005_004.png"
+    ],
+    "duration": 80534,
+    "timestamp": "2025-12-16T02:43:53.407Z"
+  },
+  {
+    "testId": "test_006",
+    "testInfo": {
+      "id": "test_006",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,770円",
+    "screenshots": [
+      "results/screenshots/test_006_001.png",
+      "results/screenshots/test_006_002.png",
+      "results/screenshots/test_006_003.png",
+      "results/screenshots/test_006_004.png"
+    ],
+    "duration": 81455,
+    "timestamp": "2025-12-16T02:45:15.896Z"
+  },
+  {
+    "testId": "test_007",
+    "testInfo": {
+      "id": "test_007",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_007_001.png",
+      "results/screenshots/test_007_002.png",
+      "results/screenshots/test_007_003.png",
+      "results/screenshots/test_007_004.png"
+    ],
+    "duration": 92532,
+    "timestamp": "2025-12-16T02:45:52.079Z"
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": true,
+    "price": "2,500円",
+    "screenshots": [
+      "results/screenshots/test_008_001.png",
+      "results/screenshots/test_008_002.png",
+      "results/screenshots/test_008_003.png",
+      "results/screenshots/test_008_004.png"
+    ],
+    "duration": 82170,
+    "timestamp": "2025-12-16T02:46:39.094Z"
+  },
+  {
+    "testId": "test_009",
+    "testInfo": {
+      "id": "test_009",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "2,460円",
+    "screenshots": [
+      "results/screenshots/test_009_001.png",
+      "results/screenshots/test_009_002.png",
+      "results/screenshots/test_009_003.png",
+      "results/screenshots/test_009_004.png"
+    ],
+    "duration": 83989,
+    "timestamp": "2025-12-16T02:47:17.093Z"
+  },
+  {
+    "testId": "test_010",
+    "testInfo": {
+      "id": "test_010",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_010_001.png",
+      "results/screenshots/test_010_002.png",
+      "results/screenshots/test_010_003.png",
+      "results/screenshots/test_010_004.png"
+    ],
+    "duration": 81766,
+    "timestamp": "2025-12-16T02:48:01.890Z"
+  },
+  {
+    "testId": "test_011",
+    "testInfo": {
+      "id": "test_011",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_011_001.png",
+      "results/screenshots/test_011_002.png",
+      "results/screenshots/test_011_003.png",
+      "results/screenshots/test_011_004.png"
+    ],
+    "duration": 81248,
+    "timestamp": "2025-12-16T02:48:39.372Z"
+  },
+  {
+    "testId": "test_012",
+    "testInfo": {
+      "id": "test_012",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_012_001.png",
+      "results/screenshots/test_012_002.png",
+      "results/screenshots/test_012_003.png",
+      "results/screenshots/test_012_004.png"
+    ],
+    "duration": 80569,
+    "timestamp": "2025-12-16T02:49:23.486Z"
+  },
+  {
+    "testId": "test_013",
+    "testInfo": {
+      "id": "test_013",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_013_001.png",
+      "results/screenshots/test_013_002.png",
+      "results/screenshots/test_013_003.png",
+      "results/screenshots/test_013_004.png"
+    ],
+    "duration": 93050,
+    "timestamp": "2025-12-16T02:50:13.452Z"
+  },
+  {
+    "testId": "test_014",
+    "testInfo": {
+      "id": "test_014",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "1,450円",
+    "screenshots": [
+      "results/screenshots/test_014_001.png",
+      "results/screenshots/test_014_002.png",
+      "results/screenshots/test_014_003.png",
+      "results/screenshots/test_014_004.png"
+    ],
+    "duration": 83001,
+    "timestamp": "2025-12-16T02:50:47.516Z"
+  },
+  {
+    "testId": "test_015",
+    "testInfo": {
+      "id": "test_015",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_015_001.png",
+      "results/screenshots/test_015_002.png",
+      "results/screenshots/test_015_003.png",
+      "results/screenshots/test_015_004.png"
+    ],
+    "duration": 79798,
+    "timestamp": "2025-12-16T02:51:34.283Z"
+  },
+  {
+    "testId": "test_016",
+    "testInfo": {
+      "id": "test_016",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_016_001.png",
+      "results/screenshots/test_016_002.png",
+      "results/screenshots/test_016_003.png",
+      "results/screenshots/test_016_004.png"
+    ],
+    "duration": 80707,
+    "timestamp": "2025-12-16T02:52:09.248Z"
+  },
+  {
+    "testId": "test_017",
+    "testInfo": {
+      "id": "test_017",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_017_001.png",
+      "results/screenshots/test_017_002.png",
+      "results/screenshots/test_017_003.png",
+      "results/screenshots/test_017_004.png"
+    ],
+    "duration": 80424,
+    "timestamp": "2025-12-16T02:52:55.746Z"
+  },
+  {
+    "testId": "test_018",
+    "testInfo": {
+      "id": "test_018",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_018_001.png",
+      "results/screenshots/test_018_002.png",
+      "results/screenshots/test_018_003.png",
+      "results/screenshots/test_018_004.png"
+    ],
+    "duration": 92511,
+    "timestamp": "2025-12-16T02:53:42.794Z"
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": true,
+    "price": "2,110円",
+    "screenshots": [
+      "results/screenshots/test_019_001.png",
+      "results/screenshots/test_019_002.png",
+      "results/screenshots/test_019_003.png",
+      "results/screenshots/test_019_004.png"
+    ],
+    "duration": 80569,
+    "timestamp": "2025-12-16T02:54:17.341Z"
+  },
+  {
+    "testId": "test_020",
+    "testInfo": {
+      "id": "test_020",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "2,010円",
+    "screenshots": [
+      "results/screenshots/test_020_001.png",
+      "results/screenshots/test_020_002.png",
+      "results/screenshots/test_020_003.png",
+      "results/screenshots/test_020_004.png"
+    ],
+    "duration": 84047,
+    "timestamp": "2025-12-16T02:55:07.873Z"
+  },
+  {
+    "testId": "test_021",
+    "testInfo": {
+      "id": "test_021",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_021_001.png",
+      "results/screenshots/test_021_002.png",
+      "results/screenshots/test_021_003.png",
+      "results/screenshots/test_021_004.png"
+    ],
+    "duration": 80068,
+    "timestamp": "2025-12-16T02:55:38.438Z"
+  },
+  {
+    "testId": "test_022",
+    "testInfo": {
+      "id": "test_022",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_022_001.png",
+      "results/screenshots/test_022_002.png",
+      "results/screenshots/test_022_003.png",
+      "results/screenshots/test_022_004.png"
+    ],
+    "duration": 81118,
+    "timestamp": "2025-12-16T02:56:30.020Z"
+  },
+  {
+    "testId": "test_023",
+    "testInfo": {
+      "id": "test_023",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_023_001.png",
+      "results/screenshots/test_023_002.png",
+      "results/screenshots/test_023_003.png",
+      "results/screenshots/test_023_004.png"
+    ],
+    "duration": 78633,
+    "timestamp": "2025-12-16T02:56:58.101Z"
+  }
+]
