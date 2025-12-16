@@ -12,44 +12,44 @@
   "actions": [
     {
       "type": "waitForSelector",
-      "selector": "body",
-      "timeout": 10000
-    },
-    {
-      "type": "wait",
-      "x": 1000
+      "selector": "text=ましかくサイズ",
+      "timeout": 30000
     },
     {
       "type": "click",
       "selector": "text=ましかくサイズ"
     },
     {
-      "type": "wait",
-      "x": 500
+      "type": "waitForSelector",
+      "selector": "text=次へ",
+      "timeout": 10000
     },
     {
       "type": "click",
       "selector": "text=次へ"
     },
     {
-      "type": "wait",
-      "x": 500
+      "type": "waitForSelector",
+      "selector": "text=ストライプA001",
+      "timeout": 10000
     },
     {
       "type": "click",
       "selector": "text=ストライプA001"
     },
     {
-      "type": "wait",
-      "x": 500
+      "type": "waitForSelector",
+      "selector": "text=/写真/",
+      "timeout": 10000
     },
     {
       "type": "click",
       "selector": "text=/写真/"
     },
     {
-      "type": "wait",
-      "x": 500
+      "type": "waitForSelector",
+      "selector": "input[type=file]",
+      "timeout": 10000
     },
     {
       "type": "uploadFile",
@@ -57,32 +57,36 @@
       "filePath": "./assets/images/anna-hunko-TjxjFl9nWlc-unsplash.jpg"
     },
     {
-      "type": "wait",
-      "x": 3000
+      "type": "waitForSelector",
+      "selector": "text=自動配置",
+      "timeout": 30000
     },
     {
       "type": "click",
       "selector": "text=自動配置"
     },
     {
-      "type": "wait",
-      "x": 3000
+      "type": "waitForSelector",
+      "selector": "text=/注文へ/",
+      "timeout": 30000
     },
     {
       "type": "evaluate",
       "value": "const btn = Array.from(document.querySelectorAll('button, a, [role=button]')).find(el => el.textContent.includes('注文')); if(btn) { btn.click(); 'clicked'; } else { 'not found'; }"
     },
     {
-      "type": "wait",
-      "x": 1000
+      "type": "waitForSelector",
+      "selector": "text=はい",
+      "timeout": 10000
     },
     {
       "type": "click",
       "selector": "text=はい"
     },
     {
-      "type": "wait",
-      "x": 2000
+      "type": "waitForSelector",
+      "selector": "#input-username",
+      "timeout": 30000
     },
     {
       "type": "fill",
@@ -95,64 +99,67 @@
       "value": "{{LOGIN_PASS}}"
     },
     {
-      "type": "wait",
-      "x": 500
-    },
-    {
       "type": "click",
       "selector": "#btn-simple-login"
     },
     {
-      "type": "wait",
-      "x": 10000
+      "type": "waitForSelector",
+      "selector": ".box-wrapper.option",
+      "timeout": 60000
     },
     {
       "type": "click",
       "selector": ".box-wrapper.option:not(.rounded-top) button"
     },
     {
-      "type": "wait",
-      "x": 2000
+      "type": "waitForSelector",
+      "selector": "text=配送先を選ぶ",
+      "timeout": 10000
     },
     {
       "type": "click",
       "selector": "text=配送先を選ぶ"
     },
     {
-      "type": "wait",
-      "x": 3000
+      "type": "waitForSelector",
+      "selector": "text=/ゆうパック/",
+      "timeout": 30000
     },
     {
       "type": "click",
       "selector": "text=/ゆうパック/"
     },
     {
-      "type": "wait",
-      "x": 500
+      "type": "waitForSelector",
+      "selector": "text=お支払いへ進む",
+      "timeout": 10000
     },
     {
       "type": "click",
       "selector": "text=お支払いへ進む"
     },
     {
-      "type": "wait",
-      "x": 1500
+      "type": "waitForSelector",
+      "selector": "text=/d払い/",
+      "timeout": 30000
     },
     {
       "type": "click",
       "selector": "text=/d払い/"
     },
     {
-      "type": "wait",
-      "x": 1000
+      "type": "waitForSelector",
+      "selector": "text=ご注文内容を確認する",
+      "timeout": 10000
     },
     {
       "type": "click",
       "selector": "text=ご注文内容を確認する"
     },
     {
-      "type": "wait",
-      "x": 2000
+      "type": "waitForSelector",
+      "selector": "text=注文を確定する",
+      "timeout": 30000
     },
     {
       "type": "screenshotFullPage"
@@ -162,8 +169,9 @@
       "selector": "text=注文を確定する"
     },
     {
-      "type": "wait",
-      "x": 3000
+      "type": "waitForSelector",
+      "selector": "text=閉じる",
+      "timeout": 30000
     },
     {
       "type": "screenshot"
@@ -173,8 +181,9 @@
       "selector": "text=閉じる"
     },
     {
-      "type": "wait",
-      "x": 500
+      "type": "waitForSelector",
+      "selector": "text=マイページへ",
+      "timeout": 10000
     },
     {
       "type": "screenshot"
@@ -184,8 +193,9 @@
       "selector": "text=マイページへ"
     },
     {
-      "type": "wait",
-      "x": 1500
+      "type": "waitForSelector",
+      "selector": "body",
+      "timeout": 30000
     },
     {
       "type": "screenshot"

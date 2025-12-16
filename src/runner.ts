@@ -59,7 +59,7 @@ interface Credentials {
 
 const SCREENSHOT_DIR = process.env.SCREENSHOT_DIR || './results/screenshots';
 const RESULTS_DIR = process.env.RESULTS_DIR || './results';
-const PARALLEL_COUNT = parseInt(process.env.PARALLEL_COUNT || '2', 10); // デフォルト2並列に削減
+const PARALLEL_COUNT = parseInt(process.env.PARALLEL_COUNT || '3', 10);
 
 // ============================================
 // ユーティリティ関数
@@ -88,54 +88,6 @@ function ensureDir(dir: string): void {
 }
 
 // ============================================
-// ローディング/オーバーレイ待機
-// ============================================
-
-async function waitForLoadingToDisappear(page: Page, timeout: number = 10000): Promise<void> {
-  try {
-    // 一般的なローディング要素が消えるのを待つ
-    const loadingSelectors = [
-      '.loading',
-      '.loader',
-      '.spinner',
-      '[class*="loading"]',
-      '[class*="spinner"]',
-      '.overlay',
-      '#loading',
-      '.modal-backdrop',
-    ];
-
-    for (const selector of loadingSelectors) {
-      try {
-        const element = await page.$(selector);
-        if (element) {
-          await page.waitForSelector(selector, { state: 'hidden', timeout });
-        }
-      } catch {
-        // セレクタが見つからない場合は無視
-      }
-    }
-  } catch {
-    // タイムアウトしても続行
-  }
-}
-
-async function waitForPageReady(page: Page): Promise<void> {
-  // ネットワークがアイドルになるまで待つ
-  try {
-    await page.waitForLoadState('networkidle', { timeout: 10000 });
-  } catch {
-    // タイムアウトしても続行
-  }
-  
-  // ローディングが消えるまで待つ
-  await waitForLoadingToDisappear(page);
-  
-  // 追加の安定化待機
-  await page.waitForTimeout(500);
-}
-
-// ============================================
 // クリック（リトライ付き）
 // ============================================
 
@@ -149,18 +101,12 @@ async function clickWithRetry(
   
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      // まずローディングが消えるのを待つ
-      await waitForLoadingToDisappear(page);
-      
       // 要素が表示されるまで待つ
-      await page.waitForSelector(selector, { state: 'visible', timeout: 10000 });
+      await page.waitForSelector(selector, { state: 'visible', timeout: timeout / maxRetries });
       
-      // クリック可能になるまで少し待つ
-      await page.waitForTimeout(300);
-      
-      // クリック実行
-      await page.click(selector, { timeout: timeout / maxRetries });
-      return; // 成功したら終了
+      // クリック実行（force: trueでオーバーレイを無視）
+      await page.click(selector, { timeout: timeout / maxRetries, force: attempt > 1 });
+      return;
       
     } catch (error) {
       lastError = error as Error;
@@ -171,14 +117,14 @@ async function clickWithRetry(
         try {
           const errorDialog = await page.$('text=再度お試しください');
           if (errorDialog) {
-            await page.click('text=OK', { timeout: 3000 }).catch(() => {});
-            await page.waitForTimeout(1000);
+            console.log(`    Closing error dialog...`);
+            await page.click('text=OK', { timeout: 3000, force: true }).catch(() => {});
+            await page.waitForTimeout(500);
           }
         } catch {}
         
-        // リトライ前に待機
-        await page.waitForTimeout(2000);
-        await waitForPageReady(page);
+        // 少し待ってリトライ
+        await page.waitForTimeout(1000);
       }
     }
   }
@@ -211,12 +157,12 @@ async function executeAction(
 
     case 'fill':
       const fillValue = replaceCredentialPlaceholders(action.value || '', creds);
-      await waitForLoadingToDisappear(page);
+      await page.waitForSelector(action.selector!, { state: 'visible', timeout });
       await page.fill(action.selector!, fillValue, { timeout });
       break;
 
     case 'select':
-      await waitForLoadingToDisappear(page);
+      await page.waitForSelector(action.selector!, { state: 'visible', timeout });
       await page.selectOption(action.selector!, action.value!, { timeout });
       break;
 
@@ -241,13 +187,11 @@ async function executeAction(
       break;
 
     case 'waitForSelector':
-      await page.waitForSelector(action.selector!, { timeout });
+      await page.waitForSelector(action.selector!, { state: 'visible', timeout });
       break;
 
     case 'wait':
       await page.waitForTimeout(action.x || 1000);
-      // wait後にもローディングチェック
-      await waitForLoadingToDisappear(page, 5000);
       break;
 
     case 'screenshot':
@@ -376,15 +320,15 @@ async function runTest(testCase: TestCase, workerId: number): Promise<TestResult
     page = await context.newPage();
 
     // 初期ページ読み込み
-    await page.goto(testCase.url, { timeout: 60000, waitUntil: 'networkidle' });
-    await waitForPageReady(page);
+    await page.goto(testCase.url, { timeout: 60000, waitUntil: 'domcontentloaded' });
 
     const screenshotIndex = { value: 1 };
     let price: string | undefined;
 
     for (let i = 0; i < testCase.actions.length; i++) {
       const action = testCase.actions[i];
-      console.log(`  ${prefix} [${i + 1}/${testCase.actions.length}] ${action.type} ${action.selector || action.value || ''}`);
+      const actionDesc = action.selector || action.value || '';
+      console.log(`  ${prefix} [${i + 1}/${testCase.actions.length}] ${action.type} ${actionDesc.substring(0, 50)}`);
       
       const result = await executeAction(page, action, creds, testCase.testInfo.id, screenshotIndex);
       
@@ -461,7 +405,7 @@ async function runTestsInParallel(
         if (!item) break;
 
         const { testCase } = item;
-        console.log(`\n🚀 [W${workerId}] Start: ${testCase.testInfo.id} (${testCase.testInfo.option} / ${testCase.testInfo.shipping} / ${testCase.testInfo.payment})`);
+        console.log(`\n🚀 [W${workerId}] Start: ${testCase.testInfo.id} (${testCase.testInfo.shipping} / ${testCase.testInfo.payment})`);
 
         const result = await runTest(testCase, workerId);
         results.push(result);
@@ -470,16 +414,13 @@ async function runTestsInParallel(
         const status = result.success ? '✅' : '❌';
         const priceInfo = result.price ? ` - ${result.price}` : '';
         console.log(`\n${status} [W${workerId}] Done: ${testCase.testInfo.id} (${(result.duration / 1000).toFixed(1)}s)${priceInfo} [${completedCount}/${totalCount}]`);
-        
-        // ワーカー間で少し間隔を空ける（サーバー負荷軽減）
-        await new Promise(resolve => setTimeout(resolve, 1000));
       }
     };
 
     workers.push(worker());
     
     // ワーカー起動を少しずらす
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
   }
 
   await Promise.all(workers);
