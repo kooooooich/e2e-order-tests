@@ -59,7 +59,7 @@ interface Credentials {
 
 const SCREENSHOT_DIR = process.env.SCREENSHOT_DIR || './results/screenshots';
 const RESULTS_DIR = process.env.RESULTS_DIR || './results';
-const PARALLEL_COUNT = parseInt(process.env.PARALLEL_COUNT || '5', 10); // デフォルト5並列
+const PARALLEL_COUNT = parseInt(process.env.PARALLEL_COUNT || '3', 10); // デフォルト3並列に削減
 
 // ============================================
 // ユーティリティ関数
@@ -88,6 +88,105 @@ function ensureDir(dir: string): void {
 }
 
 // ============================================
+// ローディング/オーバーレイ待機
+// ============================================
+
+async function waitForLoadingToDisappear(page: Page, timeout: number = 10000): Promise<void> {
+  try {
+    // 一般的なローディング要素が消えるのを待つ
+    const loadingSelectors = [
+      '.loading',
+      '.loader',
+      '.spinner',
+      '[class*="loading"]',
+      '[class*="spinner"]',
+      '.overlay',
+      '#loading',
+      '.modal-backdrop',
+    ];
+
+    for (const selector of loadingSelectors) {
+      try {
+        const element = await page.$(selector);
+        if (element) {
+          await page.waitForSelector(selector, { state: 'hidden', timeout });
+        }
+      } catch {
+        // セレクタが見つからない場合は無視
+      }
+    }
+  } catch {
+    // タイムアウトしても続行
+  }
+}
+
+async function waitForPageReady(page: Page): Promise<void> {
+  // ネットワークがアイドルになるまで待つ
+  try {
+    await page.waitForLoadState('networkidle', { timeout: 10000 });
+  } catch {
+    // タイムアウトしても続行
+  }
+  
+  // ローディングが消えるまで待つ
+  await waitForLoadingToDisappear(page);
+  
+  // 追加の安定化待機
+  await page.waitForTimeout(500);
+}
+
+// ============================================
+// クリック（リトライ付き）
+// ============================================
+
+async function clickWithRetry(
+  page: Page,
+  selector: string,
+  timeout: number = 30000,
+  maxRetries: number = 3
+): Promise<void> {
+  let lastError: Error | null = null;
+  
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      // まずローディングが消えるのを待つ
+      await waitForLoadingToDisappear(page);
+      
+      // 要素が表示されるまで待つ
+      await page.waitForSelector(selector, { state: 'visible', timeout: 10000 });
+      
+      // クリック可能になるまで少し待つ
+      await page.waitForTimeout(300);
+      
+      // クリック実行
+      await page.click(selector, { timeout: timeout / maxRetries });
+      return; // 成功したら終了
+      
+    } catch (error) {
+      lastError = error as Error;
+      console.log(`    Click attempt ${attempt}/${maxRetries} failed for ${selector}`);
+      
+      if (attempt < maxRetries) {
+        // エラーダイアログがあれば閉じる
+        try {
+          const errorDialog = await page.$('text=再度お試しください');
+          if (errorDialog) {
+            await page.click('text=OK', { timeout: 3000 }).catch(() => {});
+            await page.waitForTimeout(1000);
+          }
+        } catch {}
+        
+        // リトライ前に待機
+        await page.waitForTimeout(2000);
+        await waitForPageReady(page);
+      }
+    }
+  }
+  
+  throw lastError;
+}
+
+// ============================================
 // アクション実行
 // ============================================
 
@@ -103,19 +202,21 @@ async function executeAction(
 
   switch (action.type) {
     case 'goto':
-      await page.goto(action.value!, { timeout });
+      await page.goto(action.value!, { timeout, waitUntil: 'networkidle' });
       break;
 
     case 'click':
-      await page.click(action.selector!, { timeout });
+      await clickWithRetry(page, action.selector!, timeout);
       break;
 
     case 'fill':
       const fillValue = replaceCredentialPlaceholders(action.value || '', creds);
+      await waitForLoadingToDisappear(page);
       await page.fill(action.selector!, fillValue, { timeout });
       break;
 
     case 'select':
+      await waitForLoadingToDisappear(page);
       await page.selectOption(action.selector!, action.value!, { timeout });
       break;
 
@@ -145,6 +246,8 @@ async function executeAction(
 
     case 'wait':
       await page.waitForTimeout(action.x || 1000);
+      // wait後にもローディングチェック
+      await waitForLoadingToDisappear(page, 5000);
       break;
 
     case 'screenshot':
@@ -206,13 +309,12 @@ async function executeAction(
 }
 
 // ============================================
-// 価格取得（evaluate版）
+// 価格取得
 // ============================================
 
 async function extractPrice(page: Page): Promise<string | undefined> {
   try {
     const price = await page.evaluate(() => {
-      // 方法1: tr.total から取得
       const totalRow = document.querySelector('tr.total');
       if (totalRow) {
         const text = totalRow.textContent || '';
@@ -222,21 +324,6 @@ async function extractPrice(page: Page): Promise<string | undefined> {
         }
       }
 
-      // 方法2: 「合計」を含むテキストから取得
-      const allElements = document.querySelectorAll('*');
-      for (const el of allElements) {
-        if (el.children.length === 0 && el.textContent) {
-          const text = el.textContent.trim();
-          if (/^[0-9,]+円$/.test(text)) {
-            const parent = el.closest('tr, div, .row');
-            if (parent && parent.textContent && parent.textContent.includes('合計')) {
-              return text;
-            }
-          }
-        }
-      }
-
-      // 方法3: ページ全体から「合計」+価格パターンを探す
       const bodyText = document.body.innerText;
       const priceMatch = bodyText.match(/合計\s*([0-9,]+円)/);
       if (priceMatch) {
@@ -261,7 +348,7 @@ async function runTest(testCase: TestCase, workerId: number): Promise<TestResult
   const startTime = Date.now();
   const screenshots: string[] = [];
   const creds = getCredentials(testCase.credentialKey);
-  const prefix = `[Worker ${workerId}][${testCase.testInfo.id}]`;
+  const prefix = `[W${workerId}][${testCase.testInfo.id}]`;
   
   let browser: Browser | null = null;
   let context: BrowserContext | null = null;
@@ -288,13 +375,16 @@ async function runTest(testCase: TestCase, workerId: number): Promise<TestResult
     context = await browser.newContext(contextOptions);
     page = await context.newPage();
 
-    await page.goto(testCase.url, { timeout: 60000 });
+    // 初期ページ読み込み
+    await page.goto(testCase.url, { timeout: 60000, waitUntil: 'networkidle' });
+    await waitForPageReady(page);
 
     const screenshotIndex = { value: 1 };
     let price: string | undefined;
 
-    for (const action of testCase.actions) {
-      console.log(`  ${prefix} ${action.type} ${action.selector || action.value || ''}`);
+    for (let i = 0; i < testCase.actions.length; i++) {
+      const action = testCase.actions[i];
+      console.log(`  ${prefix} [${i + 1}/${testCase.actions.length}] ${action.type} ${action.selector || action.value || ''}`);
       
       const result = await executeAction(page, action, creds, testCase.testInfo.id, screenshotIndex);
       
@@ -370,8 +460,8 @@ async function runTestsInParallel(
         const item = queue.shift();
         if (!item) break;
 
-        const { file, testCase } = item;
-        console.log(`\n🚀 [Worker ${workerId}] Starting: ${testCase.testInfo.id} (${testCase.testInfo.payment})`);
+        const { testCase } = item;
+        console.log(`\n🚀 [W${workerId}] Start: ${testCase.testInfo.id} (${testCase.testInfo.option} / ${testCase.testInfo.shipping} / ${testCase.testInfo.payment})`);
 
         const result = await runTest(testCase, workerId);
         results.push(result);
@@ -379,11 +469,17 @@ async function runTestsInParallel(
 
         const status = result.success ? '✅' : '❌';
         const priceInfo = result.price ? ` - ${result.price}` : '';
-        console.log(`${status} [Worker ${workerId}] ${testCase.testInfo.id} (${result.duration}ms)${priceInfo} [${completedCount}/${totalCount}]`);
+        console.log(`\n${status} [W${workerId}] Done: ${testCase.testInfo.id} (${(result.duration / 1000).toFixed(1)}s)${priceInfo} [${completedCount}/${totalCount}]`);
+        
+        // ワーカー間で少し間隔を空ける（サーバー負荷軽減）
+        await new Promise(resolve => setTimeout(resolve, 1000));
       }
     };
 
     workers.push(worker());
+    
+    // ワーカー起動を少しずらす
+    await new Promise(resolve => setTimeout(resolve, 2000));
   }
 
   await Promise.all(workers);
@@ -413,38 +509,33 @@ async function main() {
       .map(f => path.join(testCasesDir, f));
   }
 
-  // テストケースを読み込み
   const testCases = testFiles.map(file => ({
     file,
     testCase: JSON.parse(fs.readFileSync(file, 'utf-8')) as TestCase,
   }));
 
-  console.log(`\n🧪 Running ${testCases.length} test(s) with ${parallelCount} parallel workers...\n`);
-  console.log('─'.repeat(80));
+  console.log(`\n${'═'.repeat(80)}`);
+  console.log(`🧪 Running ${testCases.length} tests with ${parallelCount} parallel workers`);
+  console.log(`${'═'.repeat(80)}`);
 
   const startTime = Date.now();
   
-  // 並列実行
   const results = await runTestsInParallel(testCases, parallelCount);
 
   const totalDuration = Date.now() - startTime;
 
-  // 結果をID順にソート
   results.sort((a, b) => a.testId.localeCompare(b.testId));
 
-  // 結果を保存
   const resultsFile = path.join(RESULTS_DIR, `results_${Date.now()}.json`);
   fs.writeFileSync(resultsFile, JSON.stringify(results, null, 2));
   console.log(`\n📊 Results saved to: ${resultsFile}`);
 
-  // サマリー表示
   const successCount = results.filter(r => r.success).length;
   console.log(`\n${'═'.repeat(80)}`);
   console.log(`📈 Summary: ${successCount}/${results.length} passed`);
   console.log(`⏱️  Total time: ${(totalDuration / 1000).toFixed(1)}s (${parallelCount} workers)`);
   console.log(`${'═'.repeat(80)}\n`);
 
-  // 価格一覧
   console.log('💰 Price Matrix:');
   console.log('─'.repeat(80));
   console.log(`| ${'Option'.padEnd(14)} | ${'Shipping'.padEnd(12)} | ${'Payment'.padEnd(14)} | ${'Price'.padEnd(10)} |`);
@@ -456,13 +547,12 @@ async function main() {
   }
   console.log('─'.repeat(80));
 
-  // 失敗したテスト一覧
   const failedTests = results.filter(r => !r.success);
   if (failedTests.length > 0) {
     console.log('\n❌ Failed Tests:');
     console.log('─'.repeat(80));
     for (const r of failedTests) {
-      console.log(`  ${r.testId}: ${r.error?.substring(0, 100)}`);
+      console.log(`  ${r.testId}: ${r.error?.substring(0, 80)}...`);
     }
     console.log('─'.repeat(80));
   }
