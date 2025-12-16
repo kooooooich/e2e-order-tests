@@ -59,6 +59,7 @@ interface Credentials {
 
 const SCREENSHOT_DIR = process.env.SCREENSHOT_DIR || './results/screenshots';
 const RESULTS_DIR = process.env.RESULTS_DIR || './results';
+const PARALLEL_COUNT = parseInt(process.env.PARALLEL_COUNT || '5', 10); // デフォルト5並列
 
 // ============================================
 // ユーティリティ関数
@@ -210,7 +211,6 @@ async function executeAction(
 
 async function extractPrice(page: Page): Promise<string | undefined> {
   try {
-    // page.evaluateを使ってブラウザ内で直接DOMを操作
     const price = await page.evaluate(() => {
       // 方法1: tr.total から取得
       const totalRow = document.querySelector('tr.total');
@@ -228,7 +228,6 @@ async function extractPrice(page: Page): Promise<string | undefined> {
         if (el.children.length === 0 && el.textContent) {
           const text = el.textContent.trim();
           if (/^[0-9,]+円$/.test(text)) {
-            // 親要素が「合計」を含むか確認
             const parent = el.closest('tr, div, .row');
             if (parent && parent.textContent && parent.textContent.includes('合計')) {
               return text;
@@ -255,32 +254,30 @@ async function extractPrice(page: Page): Promise<string | undefined> {
 }
 
 // ============================================
-// テスト実行
+// 単一テスト実行
 // ============================================
 
-async function runTest(testCase: TestCase): Promise<TestResult> {
+async function runTest(testCase: TestCase, workerId: number): Promise<TestResult> {
   const startTime = Date.now();
   const screenshots: string[] = [];
   const creds = getCredentials(testCase.credentialKey);
+  const prefix = `[Worker ${workerId}][${testCase.testInfo.id}]`;
   
   let browser: Browser | null = null;
   let context: BrowserContext | null = null;
   let page: Page | null = null;
 
   try {
-    // ブラウザ起動
     browser = await chromium.launch({
       headless: testCase.headless,
     });
 
-    // コンテキスト設定
     const contextOptions: any = {
       viewport: testCase.device === 'mobile' 
         ? { width: 375, height: 667 }
         : { width: 1280, height: 720 },
     };
 
-    // Basic認証
     if (creds.basicUser && creds.basicPass) {
       contextOptions.httpCredentials = {
         username: creds.basicUser,
@@ -291,15 +288,13 @@ async function runTest(testCase: TestCase): Promise<TestResult> {
     context = await browser.newContext(contextOptions);
     page = await context.newPage();
 
-    // 初期URL
     await page.goto(testCase.url, { timeout: 60000 });
 
-    // アクション実行
     const screenshotIndex = { value: 1 };
     let price: string | undefined;
 
     for (const action of testCase.actions) {
-      console.log(`  [${testCase.testInfo.id}] Executing: ${action.type} ${action.selector || action.value || ''}`);
+      console.log(`  ${prefix} ${action.type} ${action.selector || action.value || ''}`);
       
       const result = await executeAction(page, action, creds, testCase.testInfo.id, screenshotIndex);
       
@@ -307,15 +302,12 @@ async function runTest(testCase: TestCase): Promise<TestResult> {
         screenshots.push(result.screenshot);
       }
 
-      // 注文確認画面で価格を取得（screenshotFullPageの後、かつURLが/confirm/の場合）
       if (action.type === 'screenshotFullPage') {
         const currentUrl = page.url();
         if (currentUrl.includes('/confirm')) {
           price = await extractPrice(page);
           if (price) {
-            console.log(`  [${testCase.testInfo.id}] Extracted price: ${price}`);
-          } else {
-            console.log(`  [${testCase.testInfo.id}] Price extraction returned empty`);
+            console.log(`  ${prefix} Price: ${price}`);
           }
         }
       }
@@ -332,7 +324,6 @@ async function runTest(testCase: TestCase): Promise<TestResult> {
     };
 
   } catch (error) {
-    // エラー時のスクリーンショット
     if (page) {
       try {
         ensureDir(SCREENSHOT_DIR);
@@ -359,6 +350,47 @@ async function runTest(testCase: TestCase): Promise<TestResult> {
 }
 
 // ============================================
+// 並列実行ワーカー
+// ============================================
+
+async function runTestsInParallel(
+  testCases: { file: string; testCase: TestCase }[],
+  parallelCount: number
+): Promise<TestResult[]> {
+  const results: TestResult[] = [];
+  const queue = [...testCases];
+  let completedCount = 0;
+  const totalCount = testCases.length;
+
+  const workers: Promise<void>[] = [];
+
+  for (let workerId = 1; workerId <= parallelCount; workerId++) {
+    const worker = async () => {
+      while (queue.length > 0) {
+        const item = queue.shift();
+        if (!item) break;
+
+        const { file, testCase } = item;
+        console.log(`\n🚀 [Worker ${workerId}] Starting: ${testCase.testInfo.id} (${testCase.testInfo.payment})`);
+
+        const result = await runTest(testCase, workerId);
+        results.push(result);
+        completedCount++;
+
+        const status = result.success ? '✅' : '❌';
+        const priceInfo = result.price ? ` - ${result.price}` : '';
+        console.log(`${status} [Worker ${workerId}] ${testCase.testInfo.id} (${result.duration}ms)${priceInfo} [${completedCount}/${totalCount}]`);
+      }
+    };
+
+    workers.push(worker());
+  }
+
+  await Promise.all(workers);
+  return results;
+}
+
+// ============================================
 // メイン
 // ============================================
 
@@ -366,6 +398,8 @@ async function main() {
   const args = process.argv.slice(2);
   const testCasesDir = args.find(a => a.startsWith('--dir='))?.split('=')[1] || './test-cases/calendar';
   const singleFile = args.find(a => a.startsWith('--file='))?.split('=')[1];
+  const parallelArg = args.find(a => a.startsWith('--parallel='));
+  const parallelCount = parallelArg ? parseInt(parallelArg.split('=')[1], 10) : PARALLEL_COUNT;
 
   ensureDir(RESULTS_DIR);
 
@@ -379,26 +413,24 @@ async function main() {
       .map(f => path.join(testCasesDir, f));
   }
 
-  console.log(`\n🧪 Running ${testFiles.length} test(s)...\n`);
+  // テストケースを読み込み
+  const testCases = testFiles.map(file => ({
+    file,
+    testCase: JSON.parse(fs.readFileSync(file, 'utf-8')) as TestCase,
+  }));
 
-  const results: TestResult[] = [];
+  console.log(`\n🧪 Running ${testCases.length} test(s) with ${parallelCount} parallel workers...\n`);
+  console.log('─'.repeat(80));
 
-  for (const file of testFiles) {
-    console.log(`\n📋 Loading: ${file}`);
-    const testCase: TestCase = JSON.parse(fs.readFileSync(file, 'utf-8'));
-    console.log(`   Option: ${testCase.testInfo.option}`);
-    console.log(`   Shipping: ${testCase.testInfo.shipping}`);
-    console.log(`   Payment: ${testCase.testInfo.payment}`);
+  const startTime = Date.now();
+  
+  // 並列実行
+  const results = await runTestsInParallel(testCases, parallelCount);
 
-    const result = await runTest(testCase);
-    results.push(result);
+  const totalDuration = Date.now() - startTime;
 
-    if (result.success) {
-      console.log(`   ✅ Success (${result.duration}ms) - Price: ${result.price || 'N/A'}`);
-    } else {
-      console.log(`   ❌ Failed: ${result.error}`);
-    }
-  }
+  // 結果をID順にソート
+  results.sort((a, b) => a.testId.localeCompare(b.testId));
 
   // 結果を保存
   const resultsFile = path.join(RESULTS_DIR, `results_${Date.now()}.json`);
@@ -407,23 +439,34 @@ async function main() {
 
   // サマリー表示
   const successCount = results.filter(r => r.success).length;
-  console.log(`\n============================================`);
+  console.log(`\n${'═'.repeat(80)}`);
   console.log(`📈 Summary: ${successCount}/${results.length} passed`);
-  console.log(`============================================\n`);
+  console.log(`⏱️  Total time: ${(totalDuration / 1000).toFixed(1)}s (${parallelCount} workers)`);
+  console.log(`${'═'.repeat(80)}\n`);
 
   // 価格一覧
   console.log('💰 Price Matrix:');
   console.log('─'.repeat(80));
-  console.log('| Option | Shipping | Payment | Price |');
+  console.log(`| ${'Option'.padEnd(14)} | ${'Shipping'.padEnd(12)} | ${'Payment'.padEnd(14)} | ${'Price'.padEnd(10)} |`);
   console.log('─'.repeat(80));
   for (const r of results) {
     if (r.success) {
-      console.log(`| ${r.testInfo.option.padEnd(14)} | ${r.testInfo.shipping.padEnd(10)} | ${r.testInfo.payment.padEnd(14)} | ${(r.price || 'N/A').padEnd(10)} |`);
+      console.log(`| ${r.testInfo.option.padEnd(14)} | ${r.testInfo.shipping.padEnd(12)} | ${r.testInfo.payment.padEnd(14)} | ${(r.price || 'N/A').padEnd(10)} |`);
     }
   }
   console.log('─'.repeat(80));
 
-  // 終了コード
+  // 失敗したテスト一覧
+  const failedTests = results.filter(r => !r.success);
+  if (failedTests.length > 0) {
+    console.log('\n❌ Failed Tests:');
+    console.log('─'.repeat(80));
+    for (const r of failedTests) {
+      console.log(`  ${r.testId}: ${r.error?.substring(0, 100)}`);
+    }
+    console.log('─'.repeat(80));
+  }
+
   process.exit(successCount === results.length ? 0 : 1);
 }
 
