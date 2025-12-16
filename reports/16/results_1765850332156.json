@@ -1,0 +1,391 @@
+[
+  {
+    "testId": "test_001",
+    "testInfo": {
+      "id": "test_001",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "1,770円",
+    "screenshots": [
+      "results/screenshots/test_001_001.png",
+      "results/screenshots/test_001_002.png",
+      "results/screenshots/test_001_003.png",
+      "results/screenshots/test_001_004.png"
+    ],
+    "duration": 104357,
+    "timestamp": "2025-12-16T01:47:44.045Z"
+  },
+  {
+    "testId": "test_003",
+    "testInfo": {
+      "id": "test_003",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=配送先を選ぶ')\n    - locator resolved to <span data-v-5971ae94=\"\" class=\"text m-large white\">配送先を選ぶ</span>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_003_error.png"
+    ],
+    "duration": 110472,
+    "timestamp": "2025-12-16T01:47:52.167Z"
+  },
+  {
+    "testId": "test_004",
+    "testInfo": {
+      "id": "test_004",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('.box-wrapper.option.rounded-top button')\n    - locator resolved to <button class=\"\" data-v-fa95870c=\"\"></button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  2 × retrying click action\n      - waiting 100ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  4 × retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_004_error.png"
+    ],
+    "duration": 106575,
+    "timestamp": "2025-12-16T01:47:50.270Z"
+  },
+  {
+    "testId": "test_005",
+    "testInfo": {
+      "id": "test_005",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/')\n    - locator resolved to <span class=\"text\" data-v-5971ae94=\"\">ゆうパケット</span>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <span class=\"text\" data-v-5971ae94=\"\">予期せぬエラーが発生しました。再度お試しください。</span> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <span class=\"text\" data-v-5971ae94=\"\">予期せぬエラーが発生しました。再度お試しください。</span> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  2 × retrying click action\n      - waiting 100ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"header\" data-v-52ab606c=\"\" data-v-56ce4e32=\"\" data-v-0d70b82d=\"\">…</div> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  4 × retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <span class=\"text\" data-v-5971ae94=\"\">予期せぬエラーが発生しました。再度お試しください。</span> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"header\" data-v-52ab606c=\"\" data-v-56ce4e32=\"\" data-v-0d70b82d=\"\">…</div> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"header\" data-v-52ab606c=\"\" data-v-56ce4e32=\"\" data-v-0d70b82d=\"\">…</div> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <span class=\"text\" data-v-5971ae94=\"\">予期せぬエラーが発生しました。再度お試しください。</span> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_005_error.png"
+    ],
+    "duration": 117060,
+    "timestamp": "2025-12-16T01:49:42.134Z"
+  },
+  {
+    "testId": "test_006",
+    "testInfo": {
+      "id": "test_006",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=配送先を選ぶ')\n    - locator resolved to <span data-v-5971ae94=\"\" class=\"text m-large white\">配送先を選ぶ</span>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_006_error.png"
+    ],
+    "duration": 104711,
+    "timestamp": "2025-12-16T01:49:36.011Z"
+  },
+  {
+    "testId": "test_007",
+    "testInfo": {
+      "id": "test_007",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_007_001.png",
+      "results/screenshots/test_007_002.png",
+      "results/screenshots/test_007_003.png",
+      "results/screenshots/test_007_004.png"
+    ],
+    "duration": 93416,
+    "timestamp": "2025-12-16T01:49:26.607Z"
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=お支払いへ進む')\n    - locator resolved to <span data-v-5971ae94=\"\" class=\"text m-large white\">お支払いへ進む</span>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_008_error.png"
+    ],
+    "duration": 119659,
+    "timestamp": "2025-12-16T01:51:27.295Z"
+  },
+  {
+    "testId": "test_009",
+    "testInfo": {
+      "id": "test_009",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパック/')\n    - locator resolved to <span class=\"text\" data-v-5971ae94=\"\">宅配便(ゆうパック)</span>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    4 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_009_error.png"
+    ],
+    "duration": 116319,
+    "timestamp": "2025-12-16T01:51:33.361Z"
+  },
+  {
+    "testId": "test_010",
+    "testInfo": {
+      "id": "test_010",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_010_001.png",
+      "results/screenshots/test_010_002.png",
+      "results/screenshots/test_010_003.png",
+      "results/screenshots/test_010_004.png"
+    ],
+    "duration": 81594,
+    "timestamp": "2025-12-16T01:51:04.753Z"
+  },
+  {
+    "testId": "test_011",
+    "testInfo": {
+      "id": "test_011",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_011_001.png",
+      "results/screenshots/test_011_002.png",
+      "results/screenshots/test_011_003.png",
+      "results/screenshots/test_011_004.png"
+    ],
+    "duration": 82838,
+    "timestamp": "2025-12-16T01:52:28.618Z"
+  },
+  {
+    "testId": "test_012",
+    "testInfo": {
+      "id": "test_012",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパック/') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_012_error.png"
+    ],
+    "duration": 109212,
+    "timestamp": "2025-12-16T01:53:17.537Z"
+  },
+  {
+    "testId": "test_013",
+    "testInfo": {
+      "id": "test_013",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_013_001.png",
+      "results/screenshots/test_013_002.png",
+      "results/screenshots/test_013_003.png",
+      "results/screenshots/test_013_004.png"
+    ],
+    "duration": 92012,
+    "timestamp": "2025-12-16T01:53:06.398Z"
+  },
+  {
+    "testId": "test_014",
+    "testInfo": {
+      "id": "test_014",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "1,450円",
+    "screenshots": [
+      "results/screenshots/test_014_001.png",
+      "results/screenshots/test_014_002.png",
+      "results/screenshots/test_014_003.png",
+      "results/screenshots/test_014_004.png"
+    ],
+    "duration": 83949,
+    "timestamp": "2025-12-16T01:53:53.596Z"
+  },
+  {
+    "testId": "test_015",
+    "testInfo": {
+      "id": "test_015",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=ご注文内容を確認する')\n    - locator resolved to <span data-v-5971ae94=\"\" class=\"text m-large white\">ご注文内容を確認する</span>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_015_error.png"
+    ],
+    "duration": 127821,
+    "timestamp": "2025-12-16T01:55:15.247Z"
+  },
+  {
+    "testId": "test_016",
+    "testInfo": {
+      "id": "test_016",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_016_001.png",
+      "results/screenshots/test_016_002.png",
+      "results/screenshots/test_016_003.png",
+      "results/screenshots/test_016_004.png"
+    ],
+    "duration": 81281,
+    "timestamp": "2025-12-16T01:54:39.845Z"
+  },
+  {
+    "testId": "test_017",
+    "testInfo": {
+      "id": "test_017",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_017_001.png",
+      "results/screenshots/test_017_002.png",
+      "results/screenshots/test_017_003.png",
+      "results/screenshots/test_017_004.png"
+    ],
+    "duration": 81572,
+    "timestamp": "2025-12-16T01:55:16.193Z"
+  },
+  {
+    "testId": "test_018",
+    "testInfo": {
+      "id": "test_018",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_018_001.png",
+      "results/screenshots/test_018_002.png",
+      "results/screenshots/test_018_003.png",
+      "results/screenshots/test_018_004.png"
+    ],
+    "duration": 92769,
+    "timestamp": "2025-12-16T01:56:13.640Z"
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('.box-wrapper.option:not(.rounded-top) button')\n    - locator resolved to <button class=\"selected\" data-v-fa95870c=\"\"></button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  2 × retrying click action\n      - waiting 100ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  4 × retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <main class=\"\" data-v-0d70b82d=\"\">…</main> from <div data-v-75605b7e=\"\" data-v-56ce4e32=\"\" id=\"modal-wrapper\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n",
+    "screenshots": [
+      "results/screenshots/test_019_error.png"
+    ],
+    "duration": 103831,
+    "timestamp": "2025-12-16T01:57:00.118Z"
+  },
+  {
+    "testId": "test_020",
+    "testInfo": {
+      "id": "test_020",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "2,010円",
+    "screenshots": [
+      "results/screenshots/test_020_001.png",
+      "results/screenshots/test_020_002.png",
+      "results/screenshots/test_020_003.png",
+      "results/screenshots/test_020_004.png"
+    ],
+    "duration": 85488,
+    "timestamp": "2025-12-16T01:56:42.706Z"
+  },
+  {
+    "testId": "test_021",
+    "testInfo": {
+      "id": "test_021",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_021_001.png",
+      "results/screenshots/test_021_002.png",
+      "results/screenshots/test_021_003.png",
+      "results/screenshots/test_021_004.png"
+    ],
+    "duration": 80035,
+    "timestamp": "2025-12-16T01:57:34.704Z"
+  },
+  {
+    "testId": "test_022",
+    "testInfo": {
+      "id": "test_022",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=注文を確定する') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_022_001.png",
+      "results/screenshots/test_022_error.png"
+    ],
+    "duration": 127377,
+    "timestamp": "2025-12-16T01:58:51.114Z"
+  },
+  {
+    "testId": "test_023",
+    "testInfo": {
+      "id": "test_023",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_023_001.png",
+      "results/screenshots/test_023_002.png",
+      "results/screenshots/test_023_003.png",
+      "results/screenshots/test_023_004.png"
+    ],
+    "duration": 79913,
+    "timestamp": "2025-12-16T01:58:21.068Z"
+  }
+]
