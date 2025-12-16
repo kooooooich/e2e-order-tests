@@ -1,9 +1,9 @@
 {
   "testInfo": {
-    "id": "test_017",
+    "id": "test_015",
     "option": "専用スタンドなし",
     "shipping": "ゆうメール",
-    "payment": "d払い"
+    "payment": "メルペイ"
   },
   "url": "https://calendar.shimaumaprint.com/edit/",
   "credentialKey": "dev",
@@ -156,12 +156,12 @@
     },
     {
       "type": "waitForSelector",
-      "selector": "text=/d払い/",
+      "selector": "text=/メルペイ/",
       "timeout": 30000
     },
     {
       "type": "click",
-      "selector": "text=/d払い/"
+      "selector": "text=/メルペイ/"
     },
     {
       "type": "waitForSelector",

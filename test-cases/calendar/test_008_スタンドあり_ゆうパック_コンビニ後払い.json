@@ -1,9 +1,9 @@
 {
   "testInfo": {
-    "id": "test_018",
-    "option": "専用スタンドなし",
+    "id": "test_008",
+    "option": "専用スタンドあり",
     "shipping": "ゆうパック",
-    "payment": "クレジットカード"
+    "payment": "コンビニ後払い"
   },
   "url": "https://calendar.shimaumaprint.com/edit/",
   "credentialKey": "dev",
@@ -125,7 +125,7 @@
     },
     {
       "type": "click",
-      "selector": ".box-wrapper.option:not(.rounded-top) button"
+      "selector": ".box-wrapper.option.rounded-top button"
     },
     {
       "type": "waitForSelector",
@@ -156,65 +156,26 @@
     },
     {
       "type": "waitForSelector",
-      "selector": "text=/クレジットカード/",
+      "selector": "text=/コンビニ後払い/",
       "timeout": 30000
     },
     {
       "type": "click",
-      "selector": "text=/クレジットカード/"
+      "selector": "text=/コンビニ後払い/"
     },
     {
       "type": "waitForSelector",
-      "selector": "text=新しいカードを使う",
+      "selector": "text=OK",
       "timeout": 10000
     },
     {
       "type": "click",
-      "selector": "text=新しいカードを使う"
-    },
-    {
-      "type": "waitForSelector",
-      "selector": "input[type=text][maxlength='16']",
-      "timeout": 10000
-    },
-    {
-      "type": "fill",
-      "selector": "input[type=text][maxlength='16']",
-      "value": "4100000000000100"
-    },
-    {
-      "type": "fill",
-      "selector": "input[type=text][maxlength='50']",
-      "value": "hoge"
-    },
-    {
-      "type": "select",
-      "selector": "select >> nth=0",
-      "value": "12"
-    },
-    {
-      "type": "select",
-      "selector": "select >> nth=1",
-      "value": "27"
-    },
-    {
-      "type": "fill",
-      "selector": "input[type=text][maxlength='4']",
-      "value": "123"
-    },
-    {
-      "type": "waitForSelector",
-      "selector": "text=このカードを使う",
-      "timeout": 10000
-    },
-    {
-      "type": "click",
-      "selector": "text=このカードを使う"
+      "selector": "text=OK"
     },
     {
       "type": "waitForSelector",
       "selector": "text=ご注文内容を確認する",
-      "timeout": 30000
+      "timeout": 10000
     },
     {
       "type": "click",
