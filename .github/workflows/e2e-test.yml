@@ -13,16 +13,16 @@ on:
         required: false
         default: 'true'
         type: boolean
-
-  # スケジュール実行（毎日午前9時 JST = 0時 UTC）
-  schedule:
-    - cron: '0 0 * * *'
-
-  # PRでテストケース変更時
-  pull_request:
-    paths:
-      - 'test-cases/**'
-      - 'src/**'
+      parallel_count:
+        description: 'Number of parallel workers'
+        required: false
+        default: '3'
+        type: choice
+        options:
+          - '1'
+          - '2'
+          - '3'
+          - '5'
 
 env:
   # 認証情報（GitHub Secretsから取得）
