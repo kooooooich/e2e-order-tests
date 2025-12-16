@@ -59,7 +59,7 @@ interface Credentials {
 
 const SCREENSHOT_DIR = process.env.SCREENSHOT_DIR || './results/screenshots';
 const RESULTS_DIR = process.env.RESULTS_DIR || './results';
-const PARALLEL_COUNT = parseInt(process.env.PARALLEL_COUNT || '3', 10);
+const PARALLEL_COUNT = parseInt(process.env.PARALLEL_COUNT || '1', 10);
 
 // ============================================
 // ユーティリティ関数
