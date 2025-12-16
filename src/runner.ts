@@ -205,66 +205,49 @@ async function executeAction(
 }
 
 // ============================================
-// 価格取得（修正版）
+// 価格取得（evaluate版）
 // ============================================
 
 async function extractPrice(page: Page): Promise<string | undefined> {
   try {
-    // 方法1: tr.total から取得（しまうまカレンダー用）
-    const totalRow = await page.$('tr.total');
-    if (totalRow) {
-      const text = await totalRow.textContent();
-      if (text) {
-        // 「合計 1,770円」のような形式から価格を抽出
+    // page.evaluateを使ってブラウザ内で直接DOMを操作
+    const price = await page.evaluate(() => {
+      // 方法1: tr.total から取得
+      const totalRow = document.querySelector('tr.total');
+      if (totalRow) {
+        const text = totalRow.textContent || '';
         const match = text.match(/([0-9,]+円)/);
         if (match) {
           return match[1];
         }
       }
-    }
 
-    // 方法2: 「合計」を含む行から取得
-    const rows = await page.$$('tr, .row, div');
-    for (const row of rows) {
-      const text = await row.textContent();
-      if (text && text.includes('合計')) {
-        const match = text.match(/([0-9,]+円)/);
-        if (match) {
-          return match[1];
-        }
-      }
-    }
-
-    // 方法3: ページ全体から「合計」+価格パターンを探す
-    const pageText = await page.evaluate(() => document.body.innerText);
-    const priceMatch = pageText.match(/合計\s*([0-9,]+円)/);
-    if (priceMatch) {
-      return priceMatch[1];
-    }
-
-    // 方法4: 複数のセレクタパターンを試す
-    const priceSelectors = [
-      '.total-price',
-      '.price-total',
-      '[class*="total"] span.text',
-      '.total span',
-    ];
-
-    for (const selector of priceSelectors) {
-      try {
-        const element = await page.$(selector);
-        if (element) {
-          const text = await element.textContent();
-          if (text && /[0-9,]+円/.test(text)) {
-            return text.trim();
+      // 方法2: 「合計」を含むテキストから取得
+      const allElements = document.querySelectorAll('*');
+      for (const el of allElements) {
+        if (el.children.length === 0 && el.textContent) {
+          const text = el.textContent.trim();
+          if (/^[0-9,]+円$/.test(text)) {
+            // 親要素が「合計」を含むか確認
+            const parent = el.closest('tr, div, .row');
+            if (parent && parent.textContent && parent.textContent.includes('合計')) {
+              return text;
+            }
           }
         }
-      } catch {
-        continue;
       }
-    }
 
-    return undefined;
+      // 方法3: ページ全体から「合計」+価格パターンを探す
+      const bodyText = document.body.innerText;
+      const priceMatch = bodyText.match(/合計\s*([0-9,]+円)/);
+      if (priceMatch) {
+        return priceMatch[1];
+      }
+
+      return null;
+    });
+
+    return price || undefined;
   } catch (error) {
     console.warn('Price extraction failed:', error);
     return undefined;
@@ -324,11 +307,16 @@ async function runTest(testCase: TestCase): Promise<TestResult> {
         screenshots.push(result.screenshot);
       }
 
-      // 注文確認画面で価格を取得（screenshotFullPageの後）
+      // 注文確認画面で価格を取得（screenshotFullPageの後、かつURLが/confirm/の場合）
       if (action.type === 'screenshotFullPage') {
-        price = await extractPrice(page);
-        if (price) {
-          console.log(`  [${testCase.testInfo.id}] Extracted price: ${price}`);
+        const currentUrl = page.url();
+        if (currentUrl.includes('/confirm')) {
+          price = await extractPrice(page);
+          if (price) {
+            console.log(`  [${testCase.testInfo.id}] Extracted price: ${price}`);
+          } else {
+            console.log(`  [${testCase.testInfo.id}] Price extraction returned empty`);
+          }
         }
       }
     }
