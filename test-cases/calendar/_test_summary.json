@@ -1,5 +1,6 @@
 {
   "totalTests": 23,
+  "version": "v4 - waitForSelector based (no fixed waits)",
   "validCombinations": {
     "optionAri": {
       "shipping": [
