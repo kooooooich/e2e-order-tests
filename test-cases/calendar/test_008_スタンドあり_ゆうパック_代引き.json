@@ -47,9 +47,8 @@
       "selector": "text=/写真/"
     },
     {
-      "type": "waitForSelector",
-      "selector": "input[type=file]",
-      "timeout": 10000
+      "type": "wait",
+      "x": 1000
     },
     {
       "type": "uploadFile",
@@ -66,8 +65,16 @@
       "selector": "text=自動配置"
     },
     {
+      "type": "wait",
+      "x": 1000
+    },
+    {
+      "type": "evaluate",
+      "value": "const btns = Array.from(document.querySelectorAll('button')).filter(b => b.textContent.trim() === 'OK'); if(btns.length > 0) { btns[0].click(); 'clicked OK'; } else { 'no dialog'; }"
+    },
+    {
       "type": "waitForSelector",
-      "selector": "text=/注文へ/",
+      "selector": "text=/注文する/",
       "timeout": 30000
     },
     {
@@ -94,9 +101,18 @@
       "value": "{{LOGIN_USER}}"
     },
     {
+      "type": "waitForSelector",
+      "selector": "#input-password",
+      "timeout": 5000
+    },
+    {
       "type": "fill",
       "selector": "#input-password",
       "value": "{{LOGIN_PASS}}"
+    },
+    {
+      "type": "wait",
+      "x": 500
     },
     {
       "type": "click",
