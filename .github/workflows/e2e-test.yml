@@ -28,6 +28,8 @@ env:
   # 既存の認証情報
   DEV_LOGIN_USER: ${{ secrets.DEV_LOGIN_USER }}
   DEV_LOGIN_PASS: ${{ secrets.DEV_LOGIN_PASS }}
+  DEV_BASIC_USER: ${{ secrets.DEV_BASIC_USER }} 
+  DEV_BASIC_PASS: ${{ secrets.DEV_BASIC_PASS }} 
   
   # ワーカー固有の認証情報を追加
   DEV_LOGIN_USER_W1: ${{ secrets.DEV_LOGIN_USER_W1 }}
