@@ -25,11 +25,17 @@ on:
           - '5'
 
 env:
-  # 認証情報（GitHub Secretsから取得）
+  # 既存の認証情報
   DEV_LOGIN_USER: ${{ secrets.DEV_LOGIN_USER }}
   DEV_LOGIN_PASS: ${{ secrets.DEV_LOGIN_PASS }}
-  DEV_BASIC_USER: ${{ secrets.DEV_BASIC_USER }}
-  DEV_BASIC_PASS: ${{ secrets.DEV_BASIC_PASS }}
+  
+  # ワーカー固有の認証情報を追加
+  DEV_LOGIN_USER_W1: ${{ secrets.DEV_LOGIN_USER_W1 }}
+  DEV_LOGIN_PASS_W1: ${{ secrets.DEV_LOGIN_PASS_W1 }}
+  DEV_LOGIN_USER_W2: ${{ secrets.DEV_LOGIN_USER_W2 }}
+  DEV_LOGIN_PASS_W2: ${{ secrets.DEV_LOGIN_PASS_W2 }}
+  DEV_LOGIN_USER_W3: ${{ secrets.DEV_LOGIN_USER_W3 }}
+  DEV_LOGIN_PASS_W3: ${{ secrets.DEV_LOGIN_PASS_W3 }} 
   
   STAGING_LOGIN_USER: ${{ secrets.STAGING_LOGIN_USER }}
   STAGING_LOGIN_PASS: ${{ secrets.STAGING_LOGIN_PASS }}
