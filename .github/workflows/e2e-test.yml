@@ -63,7 +63,7 @@ jobs:
         
       - name: Run E2E tests
         run: |
-          npm run test -- --dir=./test-cases/${{ github.event.inputs.test_pattern || 'calendar' }}
+          npm run test -- --dir=./test-cases/${{ github.event.inputs.test_pattern || 'calendar' }} --parallel=${{ github.event.inputs.parallel_count || '3' }}
         continue-on-error: true
 
       - name: Generate HTML report
