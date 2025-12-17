@@ -1,0 +1,446 @@
+[
+  {
+    "testId": "test_001",
+    "testInfo": {
+      "id": "test_001",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "1,770円",
+    "screenshots": [
+      "results/screenshots/test_001_001.png",
+      "results/screenshots/test_001_002.png",
+      "results/screenshots/test_001_003.png",
+      "results/screenshots/test_001_004.png"
+    ],
+    "duration": 60120,
+    "timestamp": "2025-12-17T07:32:43.642Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_002",
+    "testInfo": {
+      "id": "test_002",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=閉じる') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_002_001.png",
+      "results/screenshots/test_002_error_attempt2.png"
+    ],
+    "duration": 72965,
+    "timestamp": "2025-12-17T07:34:22.205Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_003",
+    "testInfo": {
+      "id": "test_003",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=閉じる') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_003_001.png",
+      "results/screenshots/test_003_error_attempt2.png"
+    ],
+    "duration": 71960,
+    "timestamp": "2025-12-17T07:34:20.674Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_004",
+    "testInfo": {
+      "id": "test_004",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,770円",
+    "screenshots": [
+      "results/screenshots/test_004_001.png",
+      "results/screenshots/test_004_002.png",
+      "results/screenshots/test_004_003.png",
+      "results/screenshots/test_004_004.png"
+    ],
+    "duration": 46423,
+    "timestamp": "2025-12-17T07:33:30.140Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_005",
+    "testInfo": {
+      "id": "test_005",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,770円",
+    "screenshots": [
+      "results/screenshots/test_005_001.png",
+      "results/screenshots/test_005_002.png",
+      "results/screenshots/test_005_003.png",
+      "results/screenshots/test_005_004.png"
+    ],
+    "duration": 47215,
+    "timestamp": "2025-12-17T07:34:17.437Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_006",
+    "testInfo": {
+      "id": "test_006",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_006_001.png",
+      "results/screenshots/test_006_002.png",
+      "results/screenshots/test_006_003.png",
+      "results/screenshots/test_006_004.png"
+    ],
+    "duration": 56137,
+    "timestamp": "2025-12-17T07:35:13.654Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_007",
+    "testInfo": {
+      "id": "test_007",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=閉じる') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_007_001.png",
+      "results/screenshots/test_007_error_attempt2.png"
+    ],
+    "duration": 71166,
+    "timestamp": "2025-12-17T07:36:48.932Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=閉じる') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_008_001.png",
+      "results/screenshots/test_008_error_attempt2.png"
+    ],
+    "duration": 71897,
+    "timestamp": "2025-12-17T07:36:51.757Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_009",
+    "testInfo": {
+      "id": "test_009",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_009_001.png",
+      "results/screenshots/test_009_002.png",
+      "results/screenshots/test_009_003.png",
+      "results/screenshots/test_009_004.png"
+    ],
+    "duration": 46599,
+    "timestamp": "2025-12-17T07:36:00.333Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_010",
+    "testInfo": {
+      "id": "test_010",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_010_001.png",
+      "results/screenshots/test_010_002.png",
+      "results/screenshots/test_010_003.png",
+      "results/screenshots/test_010_004.png"
+    ],
+    "duration": 47697,
+    "timestamp": "2025-12-17T07:36:48.112Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_011",
+    "testInfo": {
+      "id": "test_011",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_011_001.png",
+      "results/screenshots/test_011_002.png",
+      "results/screenshots/test_011_003.png",
+      "results/screenshots/test_011_004.png"
+    ],
+    "duration": 48684,
+    "timestamp": "2025-12-17T07:37:36.879Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_012",
+    "testInfo": {
+      "id": "test_012",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=閉じる') to be visible\n    - waiting for\" https://pt01.mul-pay.jp/payment/Tds2StubCallback.idPass?transId=107c3e39-f602-4894-a886-e6c18a047732&t=bf6d357665bf6eed96c700d8c805e0ea\" navigation to finish...\n    - navigated to \"https://pt01.mul-pay.jp/payment/Tds2StubCallback.idPass?transId=107c3e39-f602-4894-a886-e6c18a047732&t=bf6d357665bf6eed96c700d8c805e0ea\"\n    - waiting for\" https://pt01.mul-pay.jp/payment/Tds2Challenge.idPass?MD=bf6d357665bf6eed96c700d8c805e0ea\" navigation to finish...\n    - navigated to \"https://pt01.mul-pay.jp/payment/Tds2Challenge.idPass?MD=bf6d357665bf6eed96c700d8c805e0ea\"\n    - waiting for\" https://aws-cart-api-calendar.shimaumaprint.com/api/tdpayment/callback/browser?asp_id=1&token=1770b8834f6d1fe1ed210e2a709e6bd2037392cb5b770e5309f16bad0c19019f&save_card_flag=off&use_save_card=off&Acc…\" navigation to finish...\n    - navigated to \"https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/credit/complete/?order_number=125121716385169&shipment_scheduled_datetime=2025-12-21&arrival_scheduled_datetime=2025-12-29&token=1770b8834f6d…\"\n",
+    "screenshots": [
+      "results/screenshots/test_012_001.png",
+      "results/screenshots/test_012_error_attempt2.png"
+    ],
+    "duration": 72118,
+    "timestamp": "2025-12-17T07:39:19.410Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_013",
+    "testInfo": {
+      "id": "test_013",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=閉じる') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_013_001.png",
+      "results/screenshots/test_013_error_attempt2.png"
+    ],
+    "duration": 72501,
+    "timestamp": "2025-12-17T07:39:20.476Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_014",
+    "testInfo": {
+      "id": "test_014",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_014_001.png",
+      "results/screenshots/test_014_002.png",
+      "results/screenshots/test_014_003.png",
+      "results/screenshots/test_014_004.png"
+    ],
+    "duration": 44749,
+    "timestamp": "2025-12-17T07:38:21.712Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_015",
+    "testInfo": {
+      "id": "test_015",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_015_001.png",
+      "results/screenshots/test_015_002.png",
+      "results/screenshots/test_015_003.png",
+      "results/screenshots/test_015_004.png"
+    ],
+    "duration": 46707,
+    "timestamp": "2025-12-17T07:39:08.526Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_016",
+    "testInfo": {
+      "id": "test_016",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_016_001.png",
+      "results/screenshots/test_016_002.png",
+      "results/screenshots/test_016_003.png",
+      "results/screenshots/test_016_004.png"
+    ],
+    "duration": 43880,
+    "timestamp": "2025-12-17T07:39:52.493Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_017",
+    "testInfo": {
+      "id": "test_017",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=閉じる') to be visible\n    - waiting for\" https://pt01.mul-pay.jp/payment/Tds2StubCallback.idPass?transId=ca273ec3-9728-4b43-9c2d-5ece7c13e176&t=de51f7ad5f499523bf6bc96ac5ba4809\" navigation to finish...\n    - navigated to \"https://pt01.mul-pay.jp/payment/Tds2StubCallback.idPass?transId=ca273ec3-9728-4b43-9c2d-5ece7c13e176&t=de51f7ad5f499523bf6bc96ac5ba4809\"\n    - waiting for\" https://pt01.mul-pay.jp/payment/Tds2Challenge.idPass?MD=de51f7ad5f499523bf6bc96ac5ba4809\" navigation to finish...\n    - navigated to \"https://pt01.mul-pay.jp/payment/Tds2Challenge.idPass?MD=de51f7ad5f499523bf6bc96ac5ba4809\"\n    - waiting for\" https://aws-cart-api-calendar.shimaumaprint.com/api/tdpayment/callback/browser?asp_id=1&token=409ad79c52d59d4a43a30ac47a8563f803fa707953948e725c0db6d75a7091bd&save_card_flag=off&use_save_card=off&Acc…\" navigation to finish...\n    - navigated to \"https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/credit/complete/?order_number=125121716412378&shipment_scheduled_datetime=2025-12-21&arrival_scheduled_datetime=2025-12-23&token=409ad79c52d5…\"\n",
+    "screenshots": [
+      "results/screenshots/test_017_001.png",
+      "results/screenshots/test_017_error_attempt2.png"
+    ],
+    "duration": 74351,
+    "timestamp": "2025-12-17T07:41:52.401Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_018",
+    "testInfo": {
+      "id": "test_018",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=閉じる') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_018_001.png",
+      "results/screenshots/test_018_error_attempt2.png"
+    ],
+    "duration": 72431,
+    "timestamp": "2025-12-17T07:41:49.952Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "2,010円",
+    "screenshots": [
+      "results/screenshots/test_019_001.png",
+      "results/screenshots/test_019_002.png",
+      "results/screenshots/test_019_003.png",
+      "results/screenshots/test_019_004.png"
+    ],
+    "duration": 46734,
+    "timestamp": "2025-12-17T07:40:39.272Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_020",
+    "testInfo": {
+      "id": "test_020",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_020_001.png",
+      "results/screenshots/test_020_002.png",
+      "results/screenshots/test_020_003.png",
+      "results/screenshots/test_020_004.png"
+    ],
+    "duration": 47411,
+    "timestamp": "2025-12-17T07:41:26.785Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_021",
+    "testInfo": {
+      "id": "test_021",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_021_001.png",
+      "results/screenshots/test_021_002.png",
+      "results/screenshots/test_021_003.png",
+      "results/screenshots/test_021_004.png"
+    ],
+    "duration": 45790,
+    "timestamp": "2025-12-17T07:42:12.667Z",
+    "workerId": 1,
+    "attempt": 1
+  },
+  {
+    "testId": "test_022",
+    "testInfo": {
+      "id": "test_022",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=閉じる') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_022_001.png",
+      "results/screenshots/test_022_error_attempt2.png"
+    ],
+    "duration": 71595,
+    "timestamp": "2025-12-17T07:44:18.916Z",
+    "workerId": 2,
+    "attempt": 2
+  }
+]
