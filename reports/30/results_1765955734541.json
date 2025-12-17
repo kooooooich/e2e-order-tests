@@ -1,0 +1,398 @@
+[
+  {
+    "testId": "test_001",
+    "testInfo": {
+      "id": "test_001",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_001_error_attempt2.png"
+    ],
+    "duration": 30178,
+    "timestamp": "2025-12-17T07:07:55.846Z",
+    "workerId": 1,
+    "attempt": 2
+  },
+  {
+    "testId": "test_002",
+    "testInfo": {
+      "id": "test_002",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_002_error_attempt2.png"
+    ],
+    "duration": 30165,
+    "timestamp": "2025-12-17T07:07:58.056Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_003",
+    "testInfo": {
+      "id": "test_003",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_003_error_attempt2.png"
+    ],
+    "duration": 30165,
+    "timestamp": "2025-12-17T07:08:01.056Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_004",
+    "testInfo": {
+      "id": "test_004",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_004_error_attempt2.png"
+    ],
+    "duration": 30178,
+    "timestamp": "2025-12-17T07:09:01.406Z",
+    "workerId": 1,
+    "attempt": 2
+  },
+  {
+    "testId": "test_005",
+    "testInfo": {
+      "id": "test_005",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_005_error_attempt2.png"
+    ],
+    "duration": 30155,
+    "timestamp": "2025-12-17T07:09:03.422Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_006",
+    "testInfo": {
+      "id": "test_006",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_006_error_attempt2.png"
+    ],
+    "duration": 30181,
+    "timestamp": "2025-12-17T07:09:06.474Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_007",
+    "testInfo": {
+      "id": "test_007",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_007_error_attempt2.png"
+    ],
+    "duration": 30164,
+    "timestamp": "2025-12-17T07:10:06.865Z",
+    "workerId": 1,
+    "attempt": 2
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_008_error_attempt2.png"
+    ],
+    "duration": 30151,
+    "timestamp": "2025-12-17T07:10:08.813Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_009",
+    "testInfo": {
+      "id": "test_009",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_009_error_attempt2.png"
+    ],
+    "duration": 30168,
+    "timestamp": "2025-12-17T07:10:11.847Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_010",
+    "testInfo": {
+      "id": "test_010",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_010_error_attempt2.png"
+    ],
+    "duration": 30166,
+    "timestamp": "2025-12-17T07:11:12.435Z",
+    "workerId": 1,
+    "attempt": 2
+  },
+  {
+    "testId": "test_011",
+    "testInfo": {
+      "id": "test_011",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_011_error_attempt2.png"
+    ],
+    "duration": 30174,
+    "timestamp": "2025-12-17T07:11:14.178Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_012",
+    "testInfo": {
+      "id": "test_012",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_012_error_attempt2.png"
+    ],
+    "duration": 30154,
+    "timestamp": "2025-12-17T07:11:17.220Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_013",
+    "testInfo": {
+      "id": "test_013",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_013_error_attempt2.png"
+    ],
+    "duration": 30152,
+    "timestamp": "2025-12-17T07:12:17.974Z",
+    "workerId": 1,
+    "attempt": 2
+  },
+  {
+    "testId": "test_014",
+    "testInfo": {
+      "id": "test_014",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_014_error_attempt2.png"
+    ],
+    "duration": 30162,
+    "timestamp": "2025-12-17T07:12:19.542Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_015",
+    "testInfo": {
+      "id": "test_015",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_015_error_attempt2.png"
+    ],
+    "duration": 30167,
+    "timestamp": "2025-12-17T07:12:22.599Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_016",
+    "testInfo": {
+      "id": "test_016",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_016_error_attempt2.png"
+    ],
+    "duration": 30163,
+    "timestamp": "2025-12-17T07:13:23.515Z",
+    "workerId": 1,
+    "attempt": 2
+  },
+  {
+    "testId": "test_017",
+    "testInfo": {
+      "id": "test_017",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_017_error_attempt2.png"
+    ],
+    "duration": 30179,
+    "timestamp": "2025-12-17T07:13:24.923Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_018",
+    "testInfo": {
+      "id": "test_018",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_018_error_attempt2.png"
+    ],
+    "duration": 30161,
+    "timestamp": "2025-12-17T07:13:27.971Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_019_error_attempt2.png"
+    ],
+    "duration": 30147,
+    "timestamp": "2025-12-17T07:14:28.989Z",
+    "workerId": 1,
+    "attempt": 2
+  },
+  {
+    "testId": "test_020",
+    "testInfo": {
+      "id": "test_020",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_020_error_attempt2.png"
+    ],
+    "duration": 30162,
+    "timestamp": "2025-12-17T07:14:30.270Z",
+    "workerId": 2,
+    "attempt": 2
+  },
+  {
+    "testId": "test_021",
+    "testInfo": {
+      "id": "test_021",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_021_error_attempt2.png"
+    ],
+    "duration": 30158,
+    "timestamp": "2025-12-17T07:14:33.336Z",
+    "workerId": 3,
+    "attempt": 2
+  },
+  {
+    "testId": "test_022",
+    "testInfo": {
+      "id": "test_022",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=ましかくサイズ') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_022_error_attempt2.png"
+    ],
+    "duration": 30160,
+    "timestamp": "2025-12-17T07:15:34.510Z",
+    "workerId": 1,
+    "attempt": 2
+  }
+]
