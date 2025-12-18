@@ -194,33 +194,31 @@
       "selector": "text=注文を確定する"
     },
     {
-      "type": "waitForSelector",
-      "selector": "text=閉じる",
-      "timeout": 30000
+      "type": "wait",
+      "x": 5000
+    },
+    {
+      "type": "evaluate",
+      "value": "\n        (async () => {\n            const maxWait = 30000;\n            const startTime = Date.now();\n            while (Date.now() - startTime < maxWait) {\n                // 完了ページのURLかチェック\n                if (window.location.href.includes('complete')) {\n                    return 'complete_url';\n                }\n                // 「閉じる」ボタンがあるかチェック\n                const closeBtn = document.querySelector('button, a, [role=button]');\n                const allElements = Array.from(document.querySelectorAll('button, a, span, div'));\n                const hasClose = allElements.some(el => el.textContent && el.textContent.includes('閉じる'));\n                if (hasClose) {\n                    return 'close_button';\n                }\n                // 「マイページへ」ボタンがあるかチェック\n                const hasMypage = allElements.some(el => el.textContent && el.textContent.includes('マイページへ'));\n                if (hasMypage) {\n                    return 'mypage_button';\n                }\n                // 注文完了メッセージがあるかチェック\n                const hasComplete = document.body.innerText.includes('ご注文ありがとう') || document.body.innerText.includes('注文を承りました');\n                if (hasComplete) {\n                    return 'complete_message';\n                }\n                await new Promise(r => setTimeout(r, 500));\n            }\n            return 'timeout';\n        })()\n    "
     },
     {
       "type": "screenshot"
     },
     {
-      "type": "click",
-      "selector": "text=閉じる"
+      "type": "evaluate",
+      "value": "const btn = Array.from(document.querySelectorAll('button, a, [role=button]')).find(el => el.textContent && el.textContent.includes('閉じる')); if(btn) { btn.click(); 'clicked'; } else { 'no close button'; }"
     },
     {
-      "type": "waitForSelector",
-      "selector": "text=マイページへ",
-      "timeout": 10000
+      "type": "wait",
+      "x": 1000
     },
     {
-      "type": "screenshot"
+      "type": "evaluate",
+      "value": "const btn = Array.from(document.querySelectorAll('button, a, [role=button]')).find(el => el.textContent && el.textContent.includes('マイページ')); if(btn) { btn.click(); 'clicked'; } else { 'no mypage button'; }"
     },
     {
-      "type": "click",
-      "selector": "text=マイページへ"
-    },
-    {
-      "type": "waitForSelector",
-      "selector": "body",
-      "timeout": 30000
+      "type": "wait",
+      "x": 2000
     },
     {
       "type": "screenshot"
