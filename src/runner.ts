@@ -297,6 +297,7 @@ async function runTest(testCase: TestCase, workerId: number): Promise<TestResult
   let browser: Browser | null = null;
   let context: BrowserContext | null = null;
   let page: Page | null = null;
+  let price: string | undefined;  // tryブロックの外で宣言
 
   try {
     browser = await chromium.launch({
@@ -323,7 +324,6 @@ async function runTest(testCase: TestCase, workerId: number): Promise<TestResult
     await page.goto(testCase.url, { timeout: 60000, waitUntil: 'domcontentloaded' });
 
     const screenshotIndex = { value: 1 };
-    let price: string | undefined;
 
     for (let i = 0; i < testCase.actions.length; i++) {
       const action = testCase.actions[i];
