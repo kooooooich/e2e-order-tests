@@ -1,0 +1,382 @@
+[
+  {
+    "testId": "test_001",
+    "testInfo": {
+      "id": "test_001",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "price": "1,770円",
+    "error": "page.evaluate: Execution context was destroyed, most likely because of a navigation",
+    "screenshots": [
+      "results/screenshots/test_001_001.png",
+      "results/screenshots/test_001_error.png"
+    ],
+    "duration": 60621,
+    "timestamp": "2025-12-19T01:20:32.847Z"
+  },
+  {
+    "testId": "test_002",
+    "testInfo": {
+      "id": "test_002",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_002_error.png"
+    ],
+    "duration": 93067,
+    "timestamp": "2025-12-19T01:21:06.298Z"
+  },
+  {
+    "testId": "test_003",
+    "testInfo": {
+      "id": "test_003",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_003_error.png"
+    ],
+    "duration": 91697,
+    "timestamp": "2025-12-19T01:21:05.928Z"
+  },
+  {
+    "testId": "test_004",
+    "testInfo": {
+      "id": "test_004",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,770円",
+    "screenshots": [
+      "results/screenshots/test_004_001.png",
+      "results/screenshots/test_004_002.png",
+      "results/screenshots/test_004_003.png"
+    ],
+    "duration": 51675,
+    "timestamp": "2025-12-19T01:21:24.603Z"
+  },
+  {
+    "testId": "test_005",
+    "testInfo": {
+      "id": "test_005",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/ゆうパケット/') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_005_error.png"
+    ],
+    "duration": 89752,
+    "timestamp": "2025-12-19T01:22:35.709Z"
+  },
+  {
+    "testId": "test_006",
+    "testInfo": {
+      "id": "test_006",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_006_001.png",
+      "results/screenshots/test_006_002.png",
+      "results/screenshots/test_006_003.png"
+    ],
+    "duration": 84272,
+    "timestamp": "2025-12-19T01:22:30.615Z"
+  },
+  {
+    "testId": "test_007",
+    "testInfo": {
+      "id": "test_007",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": true,
+    "price": "2,500円",
+    "screenshots": [
+      "results/screenshots/test_007_001.png",
+      "results/screenshots/test_007_002.png",
+      "results/screenshots/test_007_003.png"
+    ],
+    "duration": 50615,
+    "timestamp": "2025-12-19T01:22:15.301Z"
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "2,460円",
+    "screenshots": [
+      "results/screenshots/test_008_001.png",
+      "results/screenshots/test_008_002.png",
+      "results/screenshots/test_008_003.png"
+    ],
+    "duration": 48862,
+    "timestamp": "2025-12-19T01:23:04.249Z"
+  },
+  {
+    "testId": "test_009",
+    "testInfo": {
+      "id": "test_009",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=注文を確定する') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_009_error.png"
+    ],
+    "duration": 93885,
+    "timestamp": "2025-12-19T01:24:04.525Z"
+  },
+  {
+    "testId": "test_010",
+    "testInfo": {
+      "id": "test_010",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_010_001.png",
+      "results/screenshots/test_010_002.png",
+      "results/screenshots/test_010_003.png"
+    ],
+    "duration": 49431,
+    "timestamp": "2025-12-19T01:23:25.181Z"
+  },
+  {
+    "testId": "test_011",
+    "testInfo": {
+      "id": "test_011",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_011_001.png",
+      "results/screenshots/test_011_002.png",
+      "results/screenshots/test_011_003.png"
+    ],
+    "duration": 49156,
+    "timestamp": "2025-12-19T01:23:53.499Z"
+  },
+  {
+    "testId": "test_012",
+    "testInfo": {
+      "id": "test_012",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "price": "1,110円",
+    "error": "page.evaluate: Execution context was destroyed, most likely because of a navigation",
+    "screenshots": [
+      "results/screenshots/test_012_001.png",
+      "results/screenshots/test_012_error.png"
+    ],
+    "duration": 50915,
+    "timestamp": "2025-12-19T01:24:16.187Z"
+  },
+  {
+    "testId": "test_013",
+    "testInfo": {
+      "id": "test_013",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=注文を確定する') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_013_error.png"
+    ],
+    "duration": 67749,
+    "timestamp": "2025-12-19T01:25:01.340Z"
+  },
+  {
+    "testId": "test_014",
+    "testInfo": {
+      "id": "test_014",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('text=/メール便/') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_014_error.png"
+    ],
+    "duration": 87703,
+    "timestamp": "2025-12-19T01:25:32.257Z"
+  },
+  {
+    "testId": "test_015",
+    "testInfo": {
+      "id": "test_015",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_015_001.png",
+      "results/screenshots/test_015_002.png",
+      "results/screenshots/test_015_003.png"
+    ],
+    "duration": 50897,
+    "timestamp": "2025-12-19T01:25:07.120Z"
+  },
+  {
+    "testId": "test_016",
+    "testInfo": {
+      "id": "test_016",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=ご注文内容を確認する') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_016_error.png"
+    ],
+    "duration": 61912,
+    "timestamp": "2025-12-19T01:26:03.280Z"
+  },
+  {
+    "testId": "test_017",
+    "testInfo": {
+      "id": "test_017",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "price": "1,670円",
+    "error": "page.evaluate: Execution context was destroyed, most likely because of a navigation",
+    "screenshots": [
+      "results/screenshots/test_017_001.png",
+      "results/screenshots/test_017_error.png"
+    ],
+    "duration": 50713,
+    "timestamp": "2025-12-19T01:25:58.017Z"
+  },
+  {
+    "testId": "test_018",
+    "testInfo": {
+      "id": "test_018",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": true,
+    "price": "2,110円",
+    "screenshots": [
+      "results/screenshots/test_018_001.png",
+      "results/screenshots/test_018_002.png",
+      "results/screenshots/test_018_003.png"
+    ],
+    "duration": 51053,
+    "timestamp": "2025-12-19T01:26:23.341Z"
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('text=OK') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_019_error.png"
+    ],
+    "duration": 59425,
+    "timestamp": "2025-12-19T01:26:57.525Z"
+  },
+  {
+    "testId": "test_020",
+    "testInfo": {
+      "id": "test_020",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_020_001.png",
+      "results/screenshots/test_020_002.png",
+      "results/screenshots/test_020_003.png"
+    ],
+    "duration": 49125,
+    "timestamp": "2025-12-19T01:26:52.580Z"
+  },
+  {
+    "testId": "test_021",
+    "testInfo": {
+      "id": "test_021",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_021_001.png",
+      "results/screenshots/test_021_002.png",
+      "results/screenshots/test_021_003.png"
+    ],
+    "duration": 48670,
+    "timestamp": "2025-12-19T01:27:12.104Z"
+  },
+  {
+    "testId": "test_022",
+    "testInfo": {
+      "id": "test_022",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_022_001.png",
+      "results/screenshots/test_022_002.png",
+      "results/screenshots/test_022_003.png"
+    ],
+    "duration": 47924,
+    "timestamp": "2025-12-19T01:27:40.603Z"
+  }
+]
