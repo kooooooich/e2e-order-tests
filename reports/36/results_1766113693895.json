@@ -1,0 +1,396 @@
+[
+  {
+    "testId": "test_001",
+    "testInfo": {
+      "id": "test_001",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "price": "1,770円",
+    "error": "page.evaluate: Execution context was destroyed, most likely because of a navigation",
+    "screenshots": [
+      "results/screenshots/test_001_001.png",
+      "results/screenshots/test_001_error.png"
+    ],
+    "duration": 51963,
+    "timestamp": "2025-12-19T02:51:35.071Z"
+  },
+  {
+    "testId": "test_002",
+    "testInfo": {
+      "id": "test_002",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "2,060円",
+    "screenshots": [
+      "results/screenshots/test_002_001.png",
+      "results/screenshots/test_002_002.png",
+      "results/screenshots/test_002_003.png"
+    ],
+    "duration": 45148,
+    "timestamp": "2025-12-19T02:52:20.300Z"
+  },
+  {
+    "testId": "test_003",
+    "testInfo": {
+      "id": "test_003",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "1,770円",
+    "screenshots": [
+      "results/screenshots/test_003_001.png",
+      "results/screenshots/test_003_002.png",
+      "results/screenshots/test_003_003.png"
+    ],
+    "duration": 46083,
+    "timestamp": "2025-12-19T02:53:06.458Z"
+  },
+  {
+    "testId": "test_004",
+    "testInfo": {
+      "id": "test_004",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "page.waitForSelector: Timeout 60000ms exceeded.\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_004_error.png"
+    ],
+    "duration": 74941,
+    "timestamp": "2025-12-19T02:54:21.478Z"
+  },
+  {
+    "testId": "test_005",
+    "testInfo": {
+      "id": "test_005",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,770円",
+    "screenshots": [
+      "results/screenshots/test_005_001.png",
+      "results/screenshots/test_005_002.png",
+      "results/screenshots/test_005_003.png"
+    ],
+    "duration": 46444,
+    "timestamp": "2025-12-19T02:55:07.952Z"
+  },
+  {
+    "testId": "test_006",
+    "testInfo": {
+      "id": "test_006",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_006_001.png",
+      "results/screenshots/test_006_002.png",
+      "results/screenshots/test_006_003.png"
+    ],
+    "duration": 48316,
+    "timestamp": "2025-12-19T02:55:56.354Z"
+  },
+  {
+    "testId": "test_007",
+    "testInfo": {
+      "id": "test_007",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": true,
+    "price": "2,500円",
+    "screenshots": [
+      "results/screenshots/test_007_001.png",
+      "results/screenshots/test_007_002.png",
+      "results/screenshots/test_007_003.png"
+    ],
+    "duration": 46259,
+    "timestamp": "2025-12-19T02:56:42.649Z"
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "2,460円",
+    "screenshots": [
+      "results/screenshots/test_008_001.png",
+      "results/screenshots/test_008_002.png",
+      "results/screenshots/test_008_003.png"
+    ],
+    "duration": 45502,
+    "timestamp": "2025-12-19T02:57:28.231Z"
+  },
+  {
+    "testId": "test_009",
+    "testInfo": {
+      "id": "test_009",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_009_001.png",
+      "results/screenshots/test_009_002.png",
+      "results/screenshots/test_009_003.png"
+    ],
+    "duration": 45446,
+    "timestamp": "2025-12-19T02:58:13.713Z"
+  },
+  {
+    "testId": "test_010",
+    "testInfo": {
+      "id": "test_010",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_010_001.png",
+      "results/screenshots/test_010_002.png",
+      "results/screenshots/test_010_003.png"
+    ],
+    "duration": 44735,
+    "timestamp": "2025-12-19T02:58:58.527Z"
+  },
+  {
+    "testId": "test_011",
+    "testInfo": {
+      "id": "test_011",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "2,170円",
+    "screenshots": [
+      "results/screenshots/test_011_001.png",
+      "results/screenshots/test_011_002.png",
+      "results/screenshots/test_011_003.png"
+    ],
+    "duration": 44148,
+    "timestamp": "2025-12-19T02:59:42.758Z"
+  },
+  {
+    "testId": "test_012",
+    "testInfo": {
+      "id": "test_012",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_012_001.png",
+      "results/screenshots/test_012_002.png",
+      "results/screenshots/test_012_003.png"
+    ],
+    "duration": 48247,
+    "timestamp": "2025-12-19T03:00:31.043Z"
+  },
+  {
+    "testId": "test_013",
+    "testInfo": {
+      "id": "test_013",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "1,450円",
+    "screenshots": [
+      "results/screenshots/test_013_001.png",
+      "results/screenshots/test_013_002.png",
+      "results/screenshots/test_013_003.png"
+    ],
+    "duration": 46498,
+    "timestamp": "2025-12-19T03:01:17.620Z"
+  },
+  {
+    "testId": "test_014",
+    "testInfo": {
+      "id": "test_014",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_014_001.png",
+      "results/screenshots/test_014_002.png",
+      "results/screenshots/test_014_003.png"
+    ],
+    "duration": 46581,
+    "timestamp": "2025-12-19T03:02:04.235Z"
+  },
+  {
+    "testId": "test_015",
+    "testInfo": {
+      "id": "test_015",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_015_001.png",
+      "results/screenshots/test_015_002.png",
+      "results/screenshots/test_015_003.png"
+    ],
+    "duration": 45070,
+    "timestamp": "2025-12-19T03:02:49.385Z"
+  },
+  {
+    "testId": "test_016",
+    "testInfo": {
+      "id": "test_016",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,110円",
+    "screenshots": [
+      "results/screenshots/test_016_001.png",
+      "results/screenshots/test_016_002.png",
+      "results/screenshots/test_016_003.png"
+    ],
+    "duration": 45045,
+    "timestamp": "2025-12-19T03:03:34.465Z"
+  },
+  {
+    "testId": "test_017",
+    "testInfo": {
+      "id": "test_017",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_017_001.png",
+      "results/screenshots/test_017_002.png",
+      "results/screenshots/test_017_003.png"
+    ],
+    "duration": 49569,
+    "timestamp": "2025-12-19T03:04:24.068Z"
+  },
+  {
+    "testId": "test_018",
+    "testInfo": {
+      "id": "test_018",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": true,
+    "price": "2,110円",
+    "screenshots": [
+      "results/screenshots/test_018_001.png",
+      "results/screenshots/test_018_002.png",
+      "results/screenshots/test_018_003.png"
+    ],
+    "duration": 47107,
+    "timestamp": "2025-12-19T03:05:11.261Z"
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": true,
+    "price": "2,010円",
+    "screenshots": [
+      "results/screenshots/test_019_001.png",
+      "results/screenshots/test_019_002.png",
+      "results/screenshots/test_019_003.png"
+    ],
+    "duration": 45487,
+    "timestamp": "2025-12-19T03:05:56.827Z"
+  },
+  {
+    "testId": "test_020",
+    "testInfo": {
+      "id": "test_020",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_020_001.png",
+      "results/screenshots/test_020_002.png",
+      "results/screenshots/test_020_003.png"
+    ],
+    "duration": 46553,
+    "timestamp": "2025-12-19T03:06:43.459Z"
+  },
+  {
+    "testId": "test_021",
+    "testInfo": {
+      "id": "test_021",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_021_001.png",
+      "results/screenshots/test_021_002.png",
+      "results/screenshots/test_021_003.png"
+    ],
+    "duration": 45151,
+    "timestamp": "2025-12-19T03:07:28.690Z"
+  },
+  {
+    "testId": "test_022",
+    "testInfo": {
+      "id": "test_022",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": true,
+    "price": "1,670円",
+    "screenshots": [
+      "results/screenshots/test_022_001.png",
+      "results/screenshots/test_022_002.png",
+      "results/screenshots/test_022_003.png"
+    ],
+    "duration": 45084,
+    "timestamp": "2025-12-19T03:08:13.855Z"
+  }
+]
