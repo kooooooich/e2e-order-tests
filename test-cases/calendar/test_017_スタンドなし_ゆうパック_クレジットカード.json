@@ -181,8 +181,13 @@
       "selector": "text=/クレジットカード/"
     },
     {
+      "type": "wait",
+      "x": 2000,
+      "comment": "決済方法の読み込みを待機"
+    },
+    {
       "type": "waitForSelector",
-      "timeout": 10000,
+      "timeout": 30000,
       "role": "link",
       "name": "新しいカードを使う"
     },

@@ -146,7 +146,7 @@
     },
     {
       "type": "click",
-      "selector": ".box-wrapper.option:has-text(\"専用スタンドあり\") button",
+      "selector": ".box-wrapper.option:has(button):has-text(\"専用スタンドあり\") button",
       "comment": "専用スタンドあり のボタンをクリック"
     },
     {
@@ -192,10 +192,15 @@
       "comment": "決済方法選択 - ラジオボタンのためtextセレクタを使用"
     },
     {
+      "type": "wait",
+      "x": 2000,
+      "comment": "決済方法の読み込みを待機"
+    },
+    {
       "type": "waitForSelector",
       "role": "link",
       "name": "新しいカードを使う",
-      "timeout": 10000
+      "timeout": 30000
     },
     {
       "type": "click",
