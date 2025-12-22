@@ -17,6 +17,13 @@ interface TestAction {
   filePaths?: string[];
   targetSelector?: string;
   comment?: string;
+  // New fields for accessibility selectors
+  role?: string;
+  name?: string;
+  exact?: boolean;
+  // For API monitoring
+  urlPattern?: string;
+  responseField?: string;
 }
 
 interface TestInfo {
@@ -88,47 +95,74 @@ function ensureDir(dir: string): void {
 }
 
 // ============================================
+// Locator creation helper
+// ============================================
+
+function getLocator(page: Page, action: TestAction) {
+  if (action.role) {
+    // Use getByRole for accessibility-based selection
+    return page.getByRole(action.role as any, {
+      name: action.name,
+      exact: action.exact ?? false,
+    });
+  } else if (action.selector) {
+    // Fallback to traditional selector
+    return page.locator(action.selector);
+  }
+  throw new Error('Either role or selector must be specified');
+}
+
+// ============================================
 // クリック（リトライ付き）
 // ============================================
 
 async function clickWithRetry(
   page: Page,
-  selector: string,
+  action: TestAction,
   timeout: number = 30000,
   maxRetries: number = 3
-): Promise<void> {
+): Promise<boolean> {
   let lastError: Error | null = null;
-  
+
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
+      const locator = getLocator(page, action);
+
       // 要素が表示されるまで待つ
-      await page.waitForSelector(selector, { state: 'visible', timeout: timeout / maxRetries });
-      
+      await locator.waitFor({ state: 'visible', timeout: timeout / maxRetries });
+
       // クリック実行（force: trueでオーバーレイを無視）
-      await page.click(selector, { timeout: timeout / maxRetries, force: attempt > 1 });
-      return;
-      
+      await locator.click({ timeout: timeout / maxRetries, force: attempt > 1 });
+      return true;
+
     } catch (error) {
       lastError = error as Error;
-      console.log(`    Click attempt ${attempt}/${maxRetries} failed for ${selector}`);
-      
+      const identifier = action.role ? `role=${action.role} name=${action.name}` : action.selector;
+      console.log(`    Click attempt ${attempt}/${maxRetries} failed for ${identifier}`);
+
       if (attempt < maxRetries) {
         // エラーダイアログがあれば閉じる
         try {
-          const errorDialog = await page.$('text=再度お試しください');
-          if (errorDialog) {
+          const errorDialog = await page.getByText('再度お試しください').first();
+          if (await errorDialog.isVisible().catch(() => false)) {
             console.log(`    Closing error dialog...`);
-            await page.click('text=OK', { timeout: 3000, force: true }).catch(() => {});
+            await page.getByRole('button', { name: 'OK' }).click({ timeout: 3000, force: true }).catch(() => {});
             await page.waitForTimeout(500);
           }
         } catch {}
-        
+
         // 少し待ってリトライ
         await page.waitForTimeout(1000);
       }
     }
   }
-  
+
+  // Optional elements (with short timeout < 10000) should not throw
+  if (timeout < 10000) {
+    console.log(`    Optional element not found (skipping): ${action.role ? `role=${action.role} name=${action.name}` : action.selector}`);
+    return false;
+  }
+
   throw lastError;
 }
 
@@ -152,42 +186,50 @@ async function executeAction(
       break;
 
     case 'click':
-      await clickWithRetry(page, action.selector!, timeout);
+      await clickWithRetry(page, action, timeout);
       break;
 
     case 'fill':
       const fillValue = replaceCredentialPlaceholders(action.value || '', creds);
-      await page.waitForSelector(action.selector!, { state: 'visible', timeout });
-      await page.fill(action.selector!, fillValue, { timeout });
+      const fillLocator = getLocator(page, action);
+      await fillLocator.waitFor({ state: 'visible', timeout });
+      await fillLocator.fill(fillValue, { timeout });
       break;
 
     case 'select':
-      await page.waitForSelector(action.selector!, { state: 'visible', timeout });
-      await page.selectOption(action.selector!, action.value!, { timeout });
+      const selectLocator = getLocator(page, action);
+      await selectLocator.waitFor({ state: 'visible', timeout });
+      await selectLocator.selectOption(action.value!, { timeout });
       break;
 
     case 'check':
-      await page.check(action.selector!, { timeout });
+      const checkLocator = getLocator(page, action);
+      await checkLocator.check({ timeout });
       break;
 
     case 'uncheck':
-      await page.uncheck(action.selector!, { timeout });
+      const uncheckLocator = getLocator(page, action);
+      await uncheckLocator.uncheck({ timeout });
       break;
 
     case 'getText':
-      result.result = await page.textContent(action.selector!, { timeout }) || '';
+      const textLocator = getLocator(page, action);
+      result.result = await textLocator.textContent({ timeout }) || '';
       break;
 
     case 'getAttribute':
-      result.result = await page.getAttribute(action.selector!, action.value!, { timeout }) || '';
+      const attrLocator = getLocator(page, action);
+      result.result = await attrLocator.getAttribute(action.value!, { timeout }) || '';
       break;
 
     case 'getInputValue':
-      result.result = await page.inputValue(action.selector!, { timeout });
+      const inputLocator = getLocator(page, action);
+      result.result = await inputLocator.inputValue({ timeout });
       break;
 
     case 'waitForSelector':
-      await page.waitForSelector(action.selector!, { state: 'visible', timeout });
+      const waitLocator = getLocator(page, action);
+      await waitLocator.waitFor({ state: 'visible', timeout });
       break;
 
     case 'wait':
@@ -213,11 +255,13 @@ async function executeAction(
       break;
 
     case 'hover':
-      await page.hover(action.selector!, { timeout });
+      const hoverLocator = getLocator(page, action);
+      await hoverLocator.hover({ timeout });
       break;
 
     case 'scrollIntoView':
-      await page.locator(action.selector!).scrollIntoViewIfNeeded({ timeout });
+      const scrollLocator = getLocator(page, action);
+      await scrollLocator.scrollIntoViewIfNeeded({ timeout });
       break;
 
     case 'evaluate':
@@ -226,11 +270,42 @@ async function executeAction(
 
     case 'uploadFile':
       const absoluteFilePath = path.resolve(process.cwd(), action.filePath!);
-      await page.setInputFiles(action.selector!, absoluteFilePath);
+      const uploadLocator = getLocator(page, action);
+      await uploadLocator.setInputFiles(absoluteFilePath);
       break;
 
     case 'uploadFiles':
-      await page.setInputFiles(action.selector!, action.filePaths!);
+      const uploadFilesLocator = getLocator(page, action);
+      await uploadFilesLocator.setInputFiles(action.filePaths!);
+      break;
+
+    case 'uploadFileWithApiWait':
+      // Upload file and wait for API response
+      const uploadApiLocator = getLocator(page, action);
+      const uploadFilePath = path.resolve(process.cwd(), action.filePath!);
+
+      // Set up response listener before uploading
+      const responsePromise = action.urlPattern
+        ? page.waitForResponse(
+            resp => resp.url().includes(action.urlPattern!) && resp.status() === 200,
+            { timeout }
+          )
+        : null;
+
+      await uploadApiLocator.setInputFiles(uploadFilePath);
+
+      // Wait for upload API response
+      if (responsePromise) {
+        const response = await responsePromise;
+        const responseData = await response.json().catch(() => ({}));
+
+        // Store response data if needed
+        if (action.responseField && responseData[action.responseField]) {
+          result.result = JSON.stringify(responseData[action.responseField]);
+        }
+
+        console.log(`    Upload API response received: ${response.status()}`);
+      }
       break;
 
     case 'getCurrentUrl':
@@ -242,7 +317,16 @@ async function executeAction(
       break;
 
     case 'dragAndDrop':
-      await page.dragAndDrop(action.selector!, action.targetSelector!, { timeout });
+      const dragLocator = getLocator(page, action);
+      await dragLocator.dragTo(page.locator(action.targetSelector!), { timeout });
+      break;
+
+    case 'waitForResponse':
+      // Wait for specific API response
+      await page.waitForResponse(
+        resp => resp.url().includes(action.urlPattern!) && resp.status() === 200,
+        { timeout }
+      );
       break;
 
     default:
