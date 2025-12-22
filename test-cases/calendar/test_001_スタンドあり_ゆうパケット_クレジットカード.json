@@ -140,12 +140,14 @@
     },
     {
       "type": "waitForSelector",
-      "selector": ".box-wrapper.option",
-      "timeout": 60000
+      "selector": "text=/専用スタンドあり/",
+      "timeout": 60000,
+      "comment": "オプション選択エリアを待機"
     },
     {
       "type": "click",
-      "selector": ".box-wrapper.option.rounded-top button"
+      "selector": ".box-wrapper.option.rounded-top button",
+      "comment": "専用スタンドあり のボタンをクリック"
     },
     {
       "type": "waitForSelector",
