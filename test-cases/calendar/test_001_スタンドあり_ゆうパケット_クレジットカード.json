@@ -193,13 +193,13 @@
     },
     {
       "type": "waitForSelector",
-      "role": "button",
+      "role": "link",
       "name": "新しいカードを使う",
       "timeout": 10000
     },
     {
       "type": "click",
-      "role": "button",
+      "role": "link",
       "name": "新しいカードを使う"
     },
     {

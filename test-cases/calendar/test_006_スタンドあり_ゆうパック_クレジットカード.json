@@ -184,12 +184,12 @@
     {
       "type": "waitForSelector",
       "timeout": 10000,
-      "role": "button",
+      "role": "link",
       "name": "新しいカードを使う"
     },
     {
       "type": "click",
-      "role": "button",
+      "role": "link",
       "name": "新しいカードを使う"
     },
     {
