@@ -138,7 +138,7 @@
     },
     {
       "type": "click",
-      "selector": ".box-wrapper.option.rounded-top button",
+      "selector": ".box-wrapper.option:has-text(\"専用スタンドあり\") button",
       "comment": "専用スタンドあり のボタンをクリック"
     },
     {
