@@ -139,14 +139,9 @@
       "selector": "#btn-simple-login"
     },
     {
-      "type": "waitForSelector",
-      "selector": "text=/専用スタンドあり/",
-      "timeout": 60000,
-      "comment": "オプション選択エリアを待機"
-    },
-    {
       "type": "click",
       "selector": ".box-wrapper.option:has(button):has-text(\"専用スタンドあり\") button",
+      "timeout": 60000,
       "comment": "専用スタンドあり のボタンをクリック"
     },
     {
