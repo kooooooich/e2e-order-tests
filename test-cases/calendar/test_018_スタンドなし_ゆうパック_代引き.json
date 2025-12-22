@@ -132,8 +132,9 @@
     },
     {
       "type": "waitForSelector",
-      "selector": ".box-wrapper.option",
-      "timeout": 60000
+      "selector": "text=/専用スタンドなし/",
+      "timeout": 60000,
+      "comment": "オプション選択エリアを待機"
     },
     {
       "type": "click",
