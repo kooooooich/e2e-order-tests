@@ -1,0 +1,354 @@
+[
+  {
+    "testId": "test_001",
+    "testInfo": {
+      "id": "test_001",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_001_error.png"
+    ],
+    "duration": 40092,
+    "timestamp": "2025-12-22T05:05:50.157Z"
+  },
+  {
+    "testId": "test_002",
+    "testInfo": {
+      "id": "test_002",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n    - waiting for\" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=1df6367f8650a2f0fca62b1d3ab699e81650bd638dfd1d2b1c3716641b2cbae3&tool_kind_id=0&project_id=1121919\" navigation to finish...\n    - navigated to \"https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=1df6367f8650a2f0fca62b1d3ab699e81650bd638dfd1d2b1c3716641b2cbae3&tool_kind_id=0&project_id=1121919\"\n",
+    "screenshots": [
+      "results/screenshots/test_002_error.png"
+    ],
+    "duration": 29722,
+    "timestamp": "2025-12-22T05:06:19.979Z"
+  },
+  {
+    "testId": "test_003",
+    "testInfo": {
+      "id": "test_003",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n    - waiting for\" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=57aae4c9be6f82884247e5a2818b30cee8784636d48ff970c76f426247d6354d&tool_kind_id=0&project_id=1121920\" navigation to finish...\n    - navigated to \"https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=57aae4c9be6f82884247e5a2818b30cee8784636d48ff970c76f426247d6354d&tool_kind_id=0&project_id=1121920\"\n",
+    "screenshots": [
+      "results/screenshots/test_003_error.png"
+    ],
+    "duration": 29828,
+    "timestamp": "2025-12-22T05:06:49.901Z"
+  },
+  {
+    "testId": "test_004",
+    "testInfo": {
+      "id": "test_004",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_004_error.png"
+    ],
+    "duration": 28723,
+    "timestamp": "2025-12-22T05:07:18.718Z"
+  },
+  {
+    "testId": "test_005",
+    "testInfo": {
+      "id": "test_005",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパケット",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n    - waiting for\" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=30b94391d8d3c8d562672c2ad26bd271ca341ef470ea4b2f3f54e664c07246d5&tool_kind_id=0&project_id=1121922\" navigation to finish...\n    - navigated to \"https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=30b94391d8d3c8d562672c2ad26bd271ca341ef470ea4b2f3f54e664c07246d5&tool_kind_id=0&project_id=1121922\"\n",
+    "screenshots": [
+      "results/screenshots/test_005_error.png"
+    ],
+    "duration": 29142,
+    "timestamp": "2025-12-22T05:07:47.947Z"
+  },
+  {
+    "testId": "test_006",
+    "testInfo": {
+      "id": "test_006",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n    - waiting for\" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=a98cb8a53f9179d0b0e42410ad851fd7a0ed7e14d866da099a959e7a45bbb21b&tool_kind_id=0&project_id=1121923\" navigation to finish...\n    - navigated to \"https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=a98cb8a53f9179d0b0e42410ad851fd7a0ed7e14d866da099a959e7a45bbb21b&tool_kind_id=0&project_id=1121923\"\n",
+    "screenshots": [
+      "results/screenshots/test_006_error.png"
+    ],
+    "duration": 28909,
+    "timestamp": "2025-12-22T05:08:16.942Z"
+  },
+  {
+    "testId": "test_007",
+    "testInfo": {
+      "id": "test_007",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_007_error.png"
+    ],
+    "duration": 29337,
+    "timestamp": "2025-12-22T05:08:46.373Z"
+  },
+  {
+    "testId": "test_008",
+    "testInfo": {
+      "id": "test_008",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n    - waiting for\" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=15c3250b1eb85e175fd14c2db574e4a5126b17811ecf1623df6636e9f6ff3c08&tool_kind_id=0&project_id=1121925\" navigation to finish...\n    - navigated to \"https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=15c3250b1eb85e175fd14c2db574e4a5126b17811ecf1623df6636e9f6ff3c08&tool_kind_id=0&project_id=1121925\"\n",
+    "screenshots": [
+      "results/screenshots/test_008_error.png"
+    ],
+    "duration": 28940,
+    "timestamp": "2025-12-22T05:09:15.398Z"
+  },
+  {
+    "testId": "test_009",
+    "testInfo": {
+      "id": "test_009",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n    - waiting for\" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=dd99648394dcf1b4470e4d8850e50a883d47a9ed5dc6f14ac3c1872b14e14dc9&tool_kind_id=0&project_id=1121926\" navigation to finish...\n    - navigated to \"https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=dd99648394dcf1b4470e4d8850e50a883d47a9ed5dc6f14ac3c1872b14e14dc9&tool_kind_id=0&project_id=1121926\"\n",
+    "screenshots": [
+      "results/screenshots/test_009_error.png"
+    ],
+    "duration": 28639,
+    "timestamp": "2025-12-22T05:09:44.132Z"
+  },
+  {
+    "testId": "test_010",
+    "testInfo": {
+      "id": "test_010",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_010_error.png"
+    ],
+    "duration": 29702,
+    "timestamp": "2025-12-22T05:10:13.920Z"
+  },
+  {
+    "testId": "test_011",
+    "testInfo": {
+      "id": "test_011",
+      "option": "専用スタンドあり",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_011_error.png"
+    ],
+    "duration": 28709,
+    "timestamp": "2025-12-22T05:10:42.719Z"
+  },
+  {
+    "testId": "test_012",
+    "testInfo": {
+      "id": "test_012",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_012_error.png"
+    ],
+    "duration": 29235,
+    "timestamp": "2025-12-22T05:11:12.059Z"
+  },
+  {
+    "testId": "test_013",
+    "testInfo": {
+      "id": "test_013",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_013_error.png"
+    ],
+    "duration": 28731,
+    "timestamp": "2025-12-22T05:11:40.874Z"
+  },
+  {
+    "testId": "test_014",
+    "testInfo": {
+      "id": "test_014",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_014_error.png"
+    ],
+    "duration": 28529,
+    "timestamp": "2025-12-22T05:12:09.489Z"
+  },
+  {
+    "testId": "test_015",
+    "testInfo": {
+      "id": "test_015",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_015_error.png"
+    ],
+    "duration": 29172,
+    "timestamp": "2025-12-22T05:12:38.758Z"
+  },
+  {
+    "testId": "test_016",
+    "testInfo": {
+      "id": "test_016",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうメール",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_016_error.png"
+    ],
+    "duration": 28628,
+    "timestamp": "2025-12-22T05:13:07.471Z"
+  },
+  {
+    "testId": "test_017",
+    "testInfo": {
+      "id": "test_017",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "クレジットカード"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_017_error.png"
+    ],
+    "duration": 28765,
+    "timestamp": "2025-12-22T05:13:36.325Z"
+  },
+  {
+    "testId": "test_018",
+    "testInfo": {
+      "id": "test_018",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "代引き"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n    - waiting for\" https://calendar.shimaumaprint.com/edit/?use_backup=yes\" navigation to finish...\n    - navigated to \"https://calendar.shimaumaprint.com/edit/?use_backup=yes\"\n",
+    "screenshots": [
+      "results/screenshots/test_018_error.png"
+    ],
+    "duration": 29809,
+    "timestamp": "2025-12-22T05:14:06.233Z"
+  },
+  {
+    "testId": "test_019",
+    "testInfo": {
+      "id": "test_019",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "コンビニ後払い"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n    - waiting for\" https://calendar.shimaumaprint.com/edit/?use_backup=yes\" navigation to finish...\n    - navigated to \"https://calendar.shimaumaprint.com/edit/?use_backup=yes\"\n    - waiting for\" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=d9810774b7d4da6000bc8a79b07939e6ee9e9f62ea6b546a72a63afe031a88e5&tool_kind_id=0&project_id=1121936\" navigation to finish...\n    - navigated to \"https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=d9810774b7d4da6000bc8a79b07939e6ee9e9f62ea6b546a72a63afe031a88e5&tool_kind_id=0&project_id=1121936\"\n",
+    "screenshots": [
+      "results/screenshots/test_019_error.png"
+    ],
+    "duration": 29126,
+    "timestamp": "2025-12-22T05:14:35.443Z"
+  },
+  {
+    "testId": "test_020",
+    "testInfo": {
+      "id": "test_020",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "PayPay"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_020_error.png"
+    ],
+    "duration": 28795,
+    "timestamp": "2025-12-22T05:15:04.332Z"
+  },
+  {
+    "testId": "test_021",
+    "testInfo": {
+      "id": "test_021",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "メルペイ"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_021_error.png"
+    ],
+    "duration": 28598,
+    "timestamp": "2025-12-22T05:15:33.031Z"
+  },
+  {
+    "testId": "test_022",
+    "testInfo": {
+      "id": "test_022",
+      "option": "専用スタンドなし",
+      "shipping": "ゆうパック",
+      "payment": "d払い"
+    },
+    "success": false,
+    "error": "locator.waitFor: Error: strict mode violation: locator('.box-wrapper.option') resolved to 2 elements:\n    1) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option rounded-top bottom light\">…</div> aka getByText('専用スタンドあり +500円')\n    2) <div data-v-8899b61c=\"\" data-v-50a5fb34=\"\" class=\"box-wrapper option bottom light\">…</div> aka getByText('専用スタンドなし 0円')\n\nCall log:\n  - waiting for locator('.box-wrapper.option') to be visible\n",
+    "screenshots": [
+      "results/screenshots/test_022_error.png"
+    ],
+    "duration": 29184,
+    "timestamp": "2025-12-22T05:16:02.306Z"
+  }
+]
