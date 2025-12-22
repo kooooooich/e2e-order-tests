@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E2E Test Results</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container { max-width: 1400px; margin: 0 auto; }
+    h1 { color: #333; margin-bottom: 10px; }
+    .summary {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .summary-card {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .summary-card.success { border-left: 4px solid #22c55e; }
+    .summary-card.fail { border-left: 4px solid #ef4444; }
+    .summary-card .number { font-size: 36px; font-weight: bold; }
+    .summary-card .label { color: #666; }
+    
+    .section { margin-bottom: 30px; }
+    .section h2 { color: #333; margin-bottom: 15px; }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    th { background: #f8f9fa; font-weight: 600; color: #333; }
+    tr:hover { background: #f8f9fa; }
+    
+    .status {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .status.success { background: #dcfce7; color: #166534; }
+    .status.fail { background: #fee2e2; color: #991b1b; }
+    
+    .price { font-weight: 600; color: #2563eb; }
+    .error { color: #dc2626; font-size: 12px; }
+    
+    .matrix-table th { text-align: center; }
+    .matrix-table td { text-align: center; }
+    .matrix-table .price-cell { font-weight: 600; }
+    .matrix-table .price-cell.success { background: #f0fdf4; }
+    .matrix-table .price-cell.fail { background: #fef2f2; }
+    
+    .screenshots {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .screenshot-thumb {
+      width: 100px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+    .screenshot-thumb:hover { border-color: #2563eb; }
+    
+    .timestamp { color: #888; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🧪 E2E Test Results</h1>
+    <p class="timestamp">Generated: 2025/12/22 8:57:08</p>
+    
+    <div class="summary">
+      <div class="summary-card success">
+        <div class="number">9</div>
+        <div class="label">Passed</div>
+      </div>
+      <div class="summary-card fail">
+        <div class="number">13</div>
+        <div class="label">Failed</div>
+      </div>
+      <div class="summary-card">
+        <div class="number">22</div>
+        <div class="label">Total</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>💰 Price Matrix</h2>
+      <p>オプション × 配送方法 × 決済方法 の価格一覧</p>
+      
+      
+        <h3>専用スタンドあり</h3>
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>配送 \ 決済</th>
+              <th>クレジットカード</th><th>コンビニ後払い</th><th>PayPay</th><th>メルペイ</th><th>d払い</th><th>代引き</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <th>ゆうパケット</th>
+                <td class="price-cell fail">❌</td><td class="price-cell fail">❌</td><td class="price-cell fail">❌</td><td class="price-cell fail">❌</td><td class="price-cell fail">❌</td><td>-</td>
+              </tr>
+            
+              <tr>
+                <th>ゆうパック</th>
+                <td class="price-cell fail">❌</td><td class="price-cell fail">❌</td><td class="price-cell fail">❌</td><td class="price-cell fail">❌</td><td class="price-cell fail">❌</td><td class="price-cell fail">❌</td>
+              </tr>
+            
+              <tr>
+                <th>ゆうメール</th>
+                <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3>専用スタンドなし</h3>
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>配送 \ 決済</th>
+              <th>クレジットカード</th><th>コンビニ後払い</th><th>PayPay</th><th>メルペイ</th><th>d払い</th><th>代引き</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <th>ゆうパケット</th>
+                <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
+              </tr>
+            
+              <tr>
+                <th>ゆうパック</th>
+                <td class="price-cell fail">❌</td><td class="price-cell success">2,010円</td><td class="price-cell success">1,670円</td><td class="price-cell success">1,670円</td><td class="price-cell success">1,670円</td><td class="price-cell success">2,110円</td>
+              </tr>
+            
+              <tr>
+                <th>ゆうメール</th>
+                <td class="price-cell fail">❌</td><td class="price-cell success">1,450円</td><td class="price-cell success">1,110円</td><td class="price-cell success">1,110円</td><td class="price-cell success">1,110円</td><td>-</td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+    </div>
+
+    <div class="section">
+      <h2>📋 Detailed Results</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Test ID</th>
+            <th>Option</th>
+            <th>Shipping</th>
+            <th>Payment</th>
+            <th>Status</th>
+            <th>Price</th>
+            <th>Duration</th>
+            <th>Error</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td>test_001</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパケット</td>
+              <td>クレジットカード</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>33.5s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+    - waiting for" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=dac618c345e32a34eecd81fb4d554a8e5392ec278f2a633d881060224a0691ec&tool_kind_id=0&project_id=1121962" navigation to finish...
+    - navigated to "https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=dac618c345e32a34eecd81fb4d554a8e5392ec278f2a633d881060224a0691ec&tool_kind_id=0&project_id=1121962"
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_002</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパケット</td>
+              <td>コンビニ後払い</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>28.7s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+    - waiting for" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=6bd8de1bc88c29e01d401354f4667b743f1ca80d9a513da8a903abdc00e8a110&tool_kind_id=0&project_id=1121963" navigation to finish...
+    - navigated to "https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=6bd8de1bc88c29e01d401354f4667b743f1ca80d9a513da8a903abdc00e8a110&tool_kind_id=0&project_id=1121963"
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_003</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパケット</td>
+              <td>PayPay</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>28.4s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_004</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパケット</td>
+              <td>メルペイ</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>29.1s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+    - waiting for" https://calendar.shimaumaprint.com/edit/?use_backup=yes" navigation to finish...
+    - navigated to "https://calendar.shimaumaprint.com/edit/?use_backup=yes"
+    - waiting for navigation to finish...
+    - navigated to "https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=45e8d2fc1d786f171d4215f827ee11c2bfd6ecec0c14eff5c7e100c61d8f4c42&tool_kind_id=0&project_id=1121965"
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_005</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパケット</td>
+              <td>d払い</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>28.7s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_006</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパック</td>
+              <td>クレジットカード</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>29.7s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+    - waiting for" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=bd89209a9ddc99f850f9e7e1ed3fb289588d0571629d69fa0230bb3ba32f1198&tool_kind_id=0&project_id=1121967" navigation to finish...
+    - navigated to "https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=bd89209a9ddc99f850f9e7e1ed3fb289588d0571629d69fa0230bb3ba32f1198&tool_kind_id=0&project_id=1121967"
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_007</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパック</td>
+              <td>代引き</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>29.2s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+    - waiting for" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=0a621cbf726a5980d3ba1ad1a9b87c3e3bd99a7919fb49e7e2ec11ec99b4c839&tool_kind_id=0&project_id=1121968" navigation to finish...
+    - navigated to "https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=0a621cbf726a5980d3ba1ad1a9b87c3e3bd99a7919fb49e7e2ec11ec99b4c839&tool_kind_id=0&project_id=1121968"
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_008</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパック</td>
+              <td>コンビニ後払い</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>28.7s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_009</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパック</td>
+              <td>PayPay</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>28.9s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+    - waiting for" https://calendar.shimaumaprint.com/edit/?use_backup=yes" navigation to finish...
+    - navigated to "https://calendar.shimaumaprint.com/edit/?use_backup=yes"
+    - waiting for" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=4cd4ddff7f6efd2135f45ceead7f591fcff744612e7b66283979aeac6b518915&tool_kind_id=0&project_id=1121970" navigation to finish...
+    - navigated to "https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=4cd4ddff7f6efd2135f45ceead7f591fcff744612e7b66283979aeac6b518915&tool_kind_id=0&project_id=1121970"
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_010</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパック</td>
+              <td>メルペイ</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>28.8s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_011</td>
+              <td>専用スタンドあり</td>
+              <td>ゆうパック</td>
+              <td>d払い</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>28.4s</td>
+              <td class="error">locator.waitFor: Error: strict mode violation: locator('text=/専用スタンドあり/') resolved to 2 elements:
+    1) <span data-v-5971ae94="" class="text s-medium medium-gray">※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。</span> aka getByText('※「専用スタンドあり」を選択の場合、カレンダーの注文数分の専用スタンドが追加されます。')
+    2) <span class="text" data-v-5971ae94="">専用スタンドあり</span> aka getByText('専用スタンドあり', { exact: true })
+
+Call log:
+  - waiting for locator('text=/専用スタンドあり/') to be visible
+    - waiting for navigation to finish...
+    - navigated to "https://calendar.shimaumaprint.com/edit/?use_backup=yes"
+    - waiting for" https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=d36e535d221ed4bade31c02d811439b98432388c12805cbe9e05033c0ad9efea&tool_kind_id=0&project_id=1121972" navigation to finish...
+    - navigated to "https://aws-static-calendar.shimaumaprint.com/sp-cart/sps/redirect/?type=calendar-order&token=d36e535d221ed4bade31c02d811439b98432388c12805cbe9e05033c0ad9efea&tool_kind_id=0&project_id=1121972"
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_012</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうメール</td>
+              <td>クレジットカード</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>45.9s</td>
+              <td class="error">locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for getByRole('link', { name: '新しいカードを使う' }) to be visible
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_013</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうメール</td>
+              <td>コンビニ後払い</td>
+              <td><span class="status success">✓ Pass</span></td>
+              <td class="price">1,450円</td>
+              <td>62.5s</td>
+              <td class="error">-</td>
+            </tr>
+          
+            <tr>
+              <td>test_014</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうメール</td>
+              <td>PayPay</td>
+              <td><span class="status success">✓ Pass</span></td>
+              <td class="price">1,110円</td>
+              <td>61.1s</td>
+              <td class="error">-</td>
+            </tr>
+          
+            <tr>
+              <td>test_015</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうメール</td>
+              <td>メルペイ</td>
+              <td><span class="status success">✓ Pass</span></td>
+              <td class="price">1,110円</td>
+              <td>60.9s</td>
+              <td class="error">-</td>
+            </tr>
+          
+            <tr>
+              <td>test_016</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうメール</td>
+              <td>d払い</td>
+              <td><span class="status success">✓ Pass</span></td>
+              <td class="price">1,110円</td>
+              <td>59.5s</td>
+              <td class="error">-</td>
+            </tr>
+          
+            <tr>
+              <td>test_017</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうパック</td>
+              <td>クレジットカード</td>
+              <td><span class="status fail">✗ Fail</span></td>
+              <td class="price">-</td>
+              <td>46.8s</td>
+              <td class="error">locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for getByRole('link', { name: '新しいカードを使う' }) to be visible
+</td>
+            </tr>
+          
+            <tr>
+              <td>test_018</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうパック</td>
+              <td>代引き</td>
+              <td><span class="status success">✓ Pass</span></td>
+              <td class="price">2,110円</td>
+              <td>59.8s</td>
+              <td class="error">-</td>
+            </tr>
+          
+            <tr>
+              <td>test_019</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうパック</td>
+              <td>コンビニ後払い</td>
+              <td><span class="status success">✓ Pass</span></td>
+              <td class="price">2,010円</td>
+              <td>58.1s</td>
+              <td class="error">-</td>
+            </tr>
+          
+            <tr>
+              <td>test_020</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうパック</td>
+              <td>PayPay</td>
+              <td><span class="status success">✓ Pass</span></td>
+              <td class="price">1,670円</td>
+              <td>60.7s</td>
+              <td class="error">-</td>
+            </tr>
+          
+            <tr>
+              <td>test_021</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうパック</td>
+              <td>メルペイ</td>
+              <td><span class="status success">✓ Pass</span></td>
+              <td class="price">1,670円</td>
+              <td>59.8s</td>
+              <td class="error">-</td>
+            </tr>
+          
+            <tr>
+              <td>test_022</td>
+              <td>専用スタンドなし</td>
+              <td>ゆうパック</td>
+              <td>d払い</td>
+              <td><span class="status success">✓ Pass</span></td>
+              <td class="price">1,670円</td>
+              <td>59.8s</td>
+              <td class="error">-</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
