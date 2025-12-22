@@ -12,65 +12,81 @@
   "actions": [
     {
       "type": "waitForSelector",
-      "selector": "text=ましかくサイズ",
+      "role": "button",
+      "name": "ましかくサイズ",
       "timeout": 30000
     },
     {
       "type": "click",
-      "selector": "text=ましかくサイズ"
+      "role": "button",
+      "name": "ましかくサイズ"
     },
     {
       "type": "waitForSelector",
-      "selector": "text=次へ",
+      "role": "button",
+      "name": "次へ",
       "timeout": 10000
     },
     {
       "type": "click",
-      "selector": "text=次へ"
+      "role": "button",
+      "name": "次へ"
     },
     {
       "type": "waitForSelector",
-      "selector": "text=ストライプA001",
+      "role": "button",
+      "name": "ストライプA001",
       "timeout": 10000
     },
     {
       "type": "click",
-      "selector": "text=ストライプA001"
+      "role": "button",
+      "name": "ストライプA001"
     },
     {
       "type": "waitForSelector",
       "selector": "text=/写真/",
-      "timeout": 10000
+      "timeout": 10000,
+      "comment": "写真アップロードエリアを待機"
     },
     {
       "type": "click",
-      "selector": "text=/写真/"
+      "selector": "text=/写真/",
+      "comment": "写真アップロードエリアをクリック"
     },
     {
       "type": "wait",
       "x": 1000
     },
     {
-      "type": "uploadFile",
+      "type": "uploadFileWithApiWait",
       "selector": "input[type=file]",
-      "filePath": "./assets/images/anna-hunko-TjxjFl9nWlc-unsplash.jpg"
+      "filePath": "./assets/images/anna-hunko-TjxjFl9nWlc-unsplash.jpg",
+      "urlPattern": "upload",
+      "timeout": 60000,
+      "comment": "画像アップロードとAPI完了を待機"
     },
     {
       "type": "waitForSelector",
-      "selector": "text=自動配置",
+      "role": "button",
+      "name": "自動配置",
       "timeout": 30000
     },
     {
       "type": "click",
-      "selector": "text=自動配置"
+      "role": "button",
+      "name": "自動配置"
     },
     {
       "type": "wait",
       "x": 1000
     },
     {
-      "type": "evaluate",
-      "value": "const btns = Array.from(document.querySelectorAll('button')).filter(b => b.textContent.trim() === 'OK'); if(btns.length > 0) { btns[0].click(); 'clicked OK'; } else { 'no dialog'; }"
+      "type": "click",
+      "role": "button",
+      "name": "OK",
+      "timeout": 5000,
+      "comment": "ダイアログのOKボタンをクリック(存在する場合)"
     },
     {
       "type": "waitForSelector",
@@ -78,17 +94,21 @@
       "timeout": 30000
     },
     {
-      "type": "evaluate",
-      "value": "const btn = Array.from(document.querySelectorAll('button, a, [role=button]')).find(el => el.textContent.includes('注文')); if(btn) { btn.click(); 'clicked'; } else { 'not found'; }"
+      "type": "click",
+      "role": "button",
+      "name": "注文する",
+      "exact": false
     },
     {
       "type": "waitForSelector",
-      "selector": "text=はい",
+      "role": "button",
+      "name": "はい",
       "timeout": 10000
     },
     {
       "type": "click",
-      "selector": "text=はい"
+      "role": "button",
+      "name": "はい"
     },
     {
       "type": "waitForSelector",
@@ -129,12 +149,14 @@
     },
     {
       "type": "waitForSelector",
-      "selector": "text=配送先を選ぶ",
+      "role": "button",
+      "name": "配送先を選ぶ",
       "timeout": 10000
     },
     {
       "type": "click",
-      "selector": "text=配送先を選ぶ"
+      "role": "button",
+      "name": "配送先を選ぶ"
     },
     {
       "type": "waitForSelector",
@@ -143,16 +165,19 @@
     },
     {
       "type": "click",
-      "selector": "text=/ゆうパケット/"
+      "selector": "text=/ゆうパケット/",
+      "comment": "配送方法選択 - ラジオボタンのためtextセレクタを使用"
     },
     {
       "type": "waitForSelector",
-      "selector": "text=お支払いへ進む",
+      "role": "button",
+      "name": "お支払いへ進む",
       "timeout": 10000
     },
     {
       "type": "click",
-      "selector": "text=お支払いへ進む"
+      "role": "button",
+      "name": "お支払いへ進む"
     },
     {
       "type": "waitForSelector",
@@ -161,16 +186,19 @@
     },
     {
       "type": "click",
-      "selector": "text=/クレジットカード/"
+      "selector": "text=/クレジットカード/",
+      "comment": "決済方法選択 - ラジオボタンのためtextセレクタを使用"
     },
     {
       "type": "waitForSelector",
-      "selector": "text=新しいカードを使う",
+      "role": "button",
+      "name": "新しいカードを使う",
       "timeout": 10000
     },
     {
       "type": "click",
-      "selector": "text=新しいカードを使う"
+      "role": "button",
+      "name": "新しいカードを使う"
     },
     {
       "type": "waitForSelector",
@@ -204,25 +232,30 @@
     },
     {
       "type": "waitForSelector",
-      "selector": "text=このカードを使う",
+      "role": "button",
+      "name": "このカードを使う",
       "timeout": 10000
     },
     {
       "type": "click",
-      "selector": "text=このカードを使う"
+      "role": "button",
+      "name": "このカードを使う"
     },
     {
       "type": "waitForSelector",
-      "selector": "text=ご注文内容を確認する",
+      "role": "button",
+      "name": "ご注文内容を確認する",
       "timeout": 30000
     },
     {
       "type": "click",
-      "selector": "text=ご注文内容を確認する"
+      "role": "button",
+      "name": "ご注文内容を確認する"
     },
     {
       "type": "waitForSelector",
-      "selector": "text=注文を確定する",
+      "role": "button",
+      "name": "注文を確定する",
       "timeout": 30000
     },
     {
@@ -230,30 +263,40 @@
     },
     {
       "type": "click",
-      "selector": "text=注文を確定する"
+      "role": "button",
+      "name": "注文を確定する"
     },
     {
       "type": "wait",
       "x": 5000
     },
     {
-      "type": "evaluate",
-      "value": "\n        (async () => {\n            const maxWait = 30000;\n            const startTime = Date.now();\n            while (Date.now() - startTime < maxWait) {\n                // 完了ページのURLかチェック\n                if (window.location.href.includes('complete')) {\n                    return 'complete_url';\n                }\n                // 「閉じる」ボタンがあるかチェック\n                const closeBtn = document.querySelector('button, a, [role=button]');\n                const allElements = Array.from(document.querySelectorAll('button, a, span, div'));\n                const hasClose = allElements.some(el => el.textContent && el.textContent.includes('閉じる'));\n                if (hasClose) {\n                    return 'close_button';\n                }\n                // 「マイページへ」ボタンがあるかチェック\n                const hasMypage = allElements.some(el => el.textContent && el.textContent.includes('マイページへ'));\n                if (hasMypage) {\n                    return 'mypage_button';\n                }\n                // 注文完了メッセージがあるかチェック\n                const hasComplete = document.body.innerText.includes('ご注文ありがとう') || document.body.innerText.includes('注文を承りました');\n                if (hasComplete) {\n                    return 'complete_message';\n                }\n                await new Promise(r => setTimeout(r, 500));\n            }\n            return 'timeout';\n        })()\n    "
+      "type": "waitForResponse",
+      "urlPattern": "complete",
+      "timeout": 30000,
+      "comment": "注文完了APIのレスポンスを待機"
     },
     {
       "type": "screenshot"
     },
     {
-      "type": "evaluate",
-      "value": "const btn = Array.from(document.querySelectorAll('button, a, [role=button]')).find(el => el.textContent && el.textContent.includes('閉じる')); if(btn) { btn.click(); 'clicked'; } else { 'no close button'; }"
+      "type": "click",
+      "role": "button",
+      "name": "閉じる",
+      "timeout": 5000,
+      "comment": "モーダルの閉じるボタン(存在する場合)"
     },
     {
       "type": "wait",
       "x": 1000
     },
     {
-      "type": "evaluate",
-      "value": "const btn = Array.from(document.querySelectorAll('button, a, [role=button]')).find(el => el.textContent && el.textContent.includes('マイページ')); if(btn) { btn.click(); 'clicked'; } else { 'no mypage button'; }"
+      "type": "click",
+      "role": "link",
+      "name": "マイページ",
+      "exact": false,
+      "timeout": 5000,
+      "comment": "マイページへのリンク(存在する場合)"
     },
     {
       "type": "wait",
