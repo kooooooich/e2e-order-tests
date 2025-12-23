@@ -188,13 +188,11 @@
     {
       "type": "waitForSelector",
       "timeout": 30000,
-      "role": "link",
-      "name": "新しいカードを使う"
+      "selector": "text=新しいカードを使う"
     },
     {
       "type": "click",
-      "role": "link",
-      "name": "新しいカードを使う"
+      "selector": "text=新しいカードを使う"
     },
     {
       "type": "waitForSelector",
